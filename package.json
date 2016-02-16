@@ -1,0 +1,15 @@
+{
+  "name": "MopNewsCrawler",
+  "version": "0.0.0",
+  "description": "App",
+  "main": "server.js",
+  "author": {
+    "name": "Branko",
+    "email": ""
+  },
+  "dependencies": {
+    "node-jsx": "^0.13.3",
+    "react": "^0.14.7",
+    "supervisor": "^0.9.1"
+  }
+}
