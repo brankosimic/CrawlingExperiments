@@ -1,5 +1,5 @@
 ﻿var React = require('react');
-var Books = require('./views/index.jsx');
+var Articles = require('./views/index.jsx');
 
-var books = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));
-React.render(<Books books={ books } />, document.getElementById('container'));
+var articles = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));
+React.render(<Articles articles={ articles } />, document.getElementById('container'));

@@ -1,121 +1,65 @@
 ﻿var React = require('react');
 
-var BookForm = React.createClass({
+var Articles = React.createClass({
     propTypes: {
-        onBook: React.PropTypes.func.isRequired
+        articles: React.PropTypes.array
     },
     getInitialState: function() {
         return {
-            title: '',
-            read: false
+            articles: (this.props.articles || [])
         };
     },
-    changeTitle: function(ev) {
-        this.setState({
-            title: ev.target.value
-        });
-    },
-    changeRead: function() {
-        this.setState({
-            read: !this.state.read
-        });
-    },
-    addBook: function(ev) {
-        ev.preventDefault();
-
-        this.props.onBook({
-            title: this.state.title,
-            read: this.state.read
-        });
+    onArticle: function(article) {
+        this.state.articles.push(article);
 
         this.setState({
-            title: '',
-            read: false
+            articles: this.state.articles
         });
     },
     render: function() {
-        return (
-          <form onSubmit={this.addBook}>
-          <div>
-            <label htmlFor='title'>Title</label>
-          <div><input type='text' id='title' value={this.state.title} onChange={this.changeTitle} placeholder='Title' /></div>
-        </div>
-        <div>
-          <label htmlFor='title'>Read</label>
-          <div><input type='checkbox' id='read' checked={this.state.read} onChange={this.changeRead} /></div>
-        </div>
-        <div>
-          <button type='submit'>Add Book</button>
-        </div>
-      </form>
-    );
-}
-});
-
-var Books = React.createClass({
-    propTypes: {
-        books: React.PropTypes.array
-    },
-    getInitialState: function() {
-        return {
-            books: (this.props.books || [])
-        };
-    },
-    onBook: function(book) {
-        this.state.books.push(book);
-
-        this.setState({
-            books: this.state.books
-        });
-    },
-    render: function() {
-        var books = this.state.books.map(function(book) {
-            return <Book key={book.title} title={book.title} read={book.read}></Book>;
+        var articles = this.state.articles.map(function(article) {
+            return <Article article={article} ></Article>;
         });
 
         return (
           <div>
-            <BookForm onBook={this.onBook}></BookForm>
-          <table>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Read</th>
-              </tr>
-            </thead>
-            <tbody>{books}</tbody>
-          </table>
+            {articles}
         </div>
     );
 }
 });
 
-var Book = React.createClass({
+var Article = React.createClass({
     propTypes: {
-        key: React.PropTypes.string.isRequired,
-        title: React.PropTypes.string.isRequired,
-        read: React.PropTypes.bool.isRequired
+        article: React.PropTypes.object
     },
     getInitialState: function() {
         return {
-            key: this.props.key,
-            title: this.props.title,
-            read: this.props.read
+            article: this.props.article
         };
-    },
-    handleChange: function(ev) {
-        this.setState({
-            read: !this.state.read
-        });
     },
     render: function() {
         return (
-          <tr>
-            <td>{this.props.title}</td>
-            <td><input type='checkbox' checked={this.state.read} onChange={this.handleChange} /></td>
-      </tr>
+            <article className="kartica velika">
+                <a href={this.props.article.link}>
+                    <div className="above">
+                        <span className="kategorija tc_vijesti">{this.props.article.category}<i className="mark icon_foto"></i></span>
+                        <span className="shareovi"><i className="icon_dijeljenja"></i> 7</span>
+                    </div>
+                    <div className="img">
+                        <img src={this.props.article.image} /><div className="overblack"></div></div>
+                    <h1 className="srednji">{this.props.article.title}</h1>
+                    <div className="uvod">{this.props.article.summary}</div>
+                    <div className="below l0">
+                        <span className="hidden-md hidden-sm date">prije {this.props.article.time} min</span>
+                        <span className="visible-md-inline-block visible-sm-inline-block date">prije {this.props.article.time}</span>
+                        <span className="comments"><i className="icon_komentari"></i> {this.props.article.commentsCount}</span>
+                    </div>
+                    <div className="clearfix"></div>
+                </a>
+            </article>
     );
 }
 });
 
-module.exports = Books;
+module.exports = Articles;

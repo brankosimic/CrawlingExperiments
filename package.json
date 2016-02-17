@@ -8,7 +8,11 @@
     "email": ""
   },
   "dependencies": {
+    "cheerio": "^0.20.0",
+    "got": "^6.1.1",
+    "knex": "^0.10.0",
     "node-jsx": "^0.13.3",
+    "pg": "^4.4.6",
     "react": "^0.14.7",
     "supervisor": "^0.9.1"
   }
