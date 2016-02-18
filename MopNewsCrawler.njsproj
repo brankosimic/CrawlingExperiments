@@ -34,6 +34,7 @@
     <Compile Include="server.js" />
     <Compile Include="app.js" />
     <Content Include="index.html" />
+    <Content Include="KlixDB.backup" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="styles\main.css" />
