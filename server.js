@@ -1,5 +1,7 @@
 ﻿var http = require('http');
+var restify = require('restify');
 var React = require('react');
+var ReactDOMServer = require('react-dom/server');
 var jsx = require('node-jsx');
 const got = require('got');
 var cheerio = require('cheerio');
@@ -15,17 +17,39 @@ var knex = require('knex')({
 });
 
 jsx.install();
-var Articles = require('./Views/index.jsx');
+var Index = require('./Views/index.jsx');
 
-http.createServer(function (req, res) {
+var server = restify.createServer();
+
+server.get({ path : '/updatearticles/' } , updateArticles);
+server.get(/\/mainstyle\//, restify.serveStatic({
+    directory: './styles',
+    file: 'main.css'
+}));
+server.get({ path : '/' } , getArticles);
+
+
+function getArticles(req, res , next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    
+    knex('article').select('*')
+    .then(function (articles) {
+        res.end(ReactDOMServer.renderToString(React.createElement(Index, { articles: articles.slice(0, 3) })));
+    });
+}
+
+function updateArticles(req, res) {
     
     var newsServer = 'http://www.klix.ba';
-    var articles = [];
-
+    
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    
     got(newsServer)
     .then(function (response) {
+        
+        var articles = [];
         $ = cheerio.load(response.body);
-
+        
         $(".block.first.struct article").each(function () {
             articles.push({
                 title: $(this).find("h1").html(),
@@ -39,39 +63,18 @@ http.createServer(function (req, res) {
                 isBig: $(this).find("h1").is(".veliki")
             });
         });
-
+        
         knex("article").del()
         .then(function () {
             return knex('article').insert(articles);
         })
-        .then(function () {
-            return knex('article').select('*');
-        })
-        .then(function (projectNames) {
-            console.log(projectNames);
+        .then(function () { 
+            res.end("Done");
         });
     })
-    .catch(function(error) { console.log(error) });
+    .catch(function (error) { console.log(error) });   
+}
 
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(React.renderToStaticMarkup(
-        React.DOM.body(
-            null,
-      React.DOM.div({
-                id: 'container',
-                dangerouslySetInnerHTML: {
-                    __html: React.renderToString(React.createElement(Articles, {
-                        articles: articles
-                    }))
-                }
-            }),
-      React.DOM.script({
-                'id': 'initial-data',
-                'type': 'text/plain',
-                'data-json': JSON.stringify(Articles)
-            })
-        )
-    ));
-}).listen(port);
+server.listen(port);
 
 console.log('Listening on http://localhost:' + port);

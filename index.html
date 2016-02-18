@@ -1,0 +1,1201 @@
+﻿<!DOCTYPE html>
+<html lang="bs-BA">
+<head>
+    <meta charset="utf-8">
+    <title>Klix.ba | Saznaj više</title>
+    <meta name="robots" content="all">
+    <meta name="keywords" content="klix, klix.ba, sarajevo-x, sarajevo-x.com, internet, portal, vijesti, sport, magazin, bosna i hercegovina, bih, sarajevo">
+    <meta name="description" content="Klix.ba je najposjećeniji i najutjecajniji informativni portal u Bosni i Hercegovini. Najvažnije i najbrže vijesti iz Sarajeva, BiH i svijeta. Saznaj više">
+    <meta property="fb:app_id" content="171222711838">
+    <meta property="og:title" content="Klix.ba | Saznaj više" />
+    <meta property="og:image" content="http://static.klix.ba/images/og/klix.jpg" />
+    <meta property="og:url" content="http://www.klix.ba" />
+    <meta property="og:description" content="Klix.ba je najposjećeniji i najutjecajniji informativni portal u Bosni i Hercegovini. Najvažnije i najbrže vijesti iz Sarajeva, BiH i svijeta. Saznaj više" />
+    <link rel="alternate" type="application/rss+xml" title="Klix.ba - Naslovnica" href="http://www.klix.ba/rss/naslovnica">
+    <meta http-equiv="refresh" content="600">
+
+    <style type="text/css">
+        [ng\:cloak], [], [data-], [x-], ., .x- {
+            display: none !important;
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body id="kat_naslovnica" ng-app="klixApp">
+    <header ng-controller="HeaderCtrl">
+        <div class="header_container">
+            <div class="burger_wrap" ng-click="expanded = !expanded;">
+                <a class="burger pointer"><i class="burger icon_burger pointer" ng-class="{'icon_x': expanded, 'icon_burger': !expanded}"></i></a>
+            </div>
+            <div class="logo_wrap">
+                <a href="/" onclick="javascript:window.location = '/';ga('send', 'event', 'Logo', 'Click', '');" title="Klix.ba" class="logo"><span class="icon_kx_logo"></span></a>
+            </div>
+            <div class="lsep"></div>
+            <nav ng-class="{'expanded': expanded}">
+                <ul class="categories">
+                    <li class="li_pocetna visible-xs">
+                        <div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/" class="tch_klix"><div class="kocka"></div> Početna</a></div>
+                    </li>
+                    <li class="li_vijesti">
+                        <div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vijesti" class="tch_vijesti"><div class="kocka bg_vijesti"></div> Vijesti</a> <i ng-click="expandedData.vijesti = !expandedData.vijesti;" class="" ng-class="{'icon_chevron_gore': expandedData.vijesti, 'icon_chevron_dole': !expandedData.vijesti}"></i></div>
+                        <ul class="nivo1" ng-class="{'visible': expandedData.vijesti}">
+                            <mark class="strelica"></mark>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/najnovije">Najnovije</a></div></li>
+                            <li>
+                                <a href="http://www.klix.ba/lokalne-vijesti"><div class="item">Lokalne vijesti</div></a>
+                                <ul class="nivo2">
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lokalne-vijesti/kanton-sarajevo">Kanton Sarajevo</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/hercegovacko-neretvanski-kanton">Hercegovačko-neretvanski kanton</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/unsko-sanski-kanton">Unsko-sanski kanton</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/posavski-kanton">Posavski kanton</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/tuzlanski-kanton">Tuzlanski kanton</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/zenicko-dobojski-kanton">Zeničko-dobojski kanton</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/bosansko-podrinjski-kanton">Bosansko-podrinjski kanton</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/srednjobosanski-kanton">Srednjobosanski kanton</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/zapadnohercegovacki-kanton">Zapadnohercegovački kanton</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/kanton-10">Kanton 10</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/banjalucka-regija">Banjalučka regija</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/dobojsko-bijeljinska-regija">Dobojsko-bijeljinska regija</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/sarajevsko-zvornicka-regija">Sarajevsko-zvornička regija</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/trebinjsko-focanska-regija">Trebinjsko-fočanska regija</a></div></li>
+                                    <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://www.klix.ba/lokalne-vijesti/brcko-distrikt">Brčko Distrikt</a></div></li>
+                                </ul>
+                            </li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vijesti/bih">BiH</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vijesti/regija">Regija</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vijesti/svijet">Svijet</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vijesti/kultura">Kultura</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vijesti/crna-hronika">Crna hronika</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vijesti/eu-integracije">EU integracije</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vijesti/humanitarne-akcije">Humanitarne akcije</a></div></li>
+                        </ul>
+                    </li>
+                    <li class="li_biznis">
+                        <div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/biznis" class="tch_biznis"><div class="kocka bg_biznis"></div> Biznis</a> <i ng-click="expandedData.biznis = !expandedData.biznis;" class="" ng-class="{'icon_chevron_gore': expandedData.biznis, 'icon_chevron_dole': !expandedData.biznis}"></i></div>
+                        <ul class="nivo1" ng-class="{'visible': expandedData.biznis}">
+                            <mark class="strelica"></mark>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/biznis/privreda">Privreda</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/biznis/finansije">Finansije</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/biznis/investicije">Investicije</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/biznis/eurozona">Eurozona</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/biznis/berza">Berza</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/biznis/startupi">Startupi</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/biznis/posao">Posao</a></div></li>
+                        </ul>
+                    </li>
+                    <li class="li_sport">
+                        <div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/sport" class="tch_sport"><div class="kocka bg_sport"></div> Sport</a> <i ng-click="expandedData.sport = !expandedData.sport;" class="" ng-class="{'icon_chevron_gore': expandedData.sport, 'icon_chevron_dole': !expandedData.sport}"></i></div>
+                        <ul class="nivo1" ng-class="{'visible': expandedData.sport}">
+                            <mark class="strelica"></mark>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/sport/nogomet">Nogomet</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/sport/kosarka">Košarka</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/sport/tenis">Tenis</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/sport/rukomet">Rukomet</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/sport/formula1">Formula 1</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/sport/skijanje">Skijanje</a></div></li>
+                        </ul>
+                    </li>
+                    <li class="li_magazin">
+                        <div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/magazin" class="tch_magazin"><div class="kocka bg_magazin"></div> Magazin</a> <i ng-click="expandedData.magazin = !expandedData.magazin;" class="" ng-class="{'icon_chevron_gore': expandedData.magazin, 'icon_chevron_dole': !expandedData.magazin}"></i></div>
+                        <ul class="nivo1" ng-class="{'visible': expandedData.magazin}">
+                            <mark class="strelica"></mark>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/magazin/muzika">Muzika</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/magazin/film-tv">Film/TV</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/magazin/showbiz">Showbiz</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/magazin/ljepotice">Ljepotice</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/magazin/zanimljivosti">Zanimljivosti</a></div></li>
+                        </ul>
+                    </li>
+                    <li class="li_lifestyle">
+                        <div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lifestyle" class="tch_lifestyle"><div class="kocka bg_lifestyle"></div> Lifestyle</a> <i ng-click="expandedData.lifestyle = !expandedData.lifestyle;" class="" ng-class="{'icon_chevron_gore': expandedData.lifestyle, 'icon_chevron_dole': !expandedData.lifestyle}"></i></div>
+                        <ul class="nivo1" ng-class="{'visible': expandedData.lifestyle}">
+                            <mark class="strelica"></mark>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lifestyle/modailjepota">Moda i ljepota</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lifestyle/zdravlje">Zdravlje</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lifestyle/vezeiseks">Veze i seks</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lifestyle/hranaipice">Hrana i piće</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lifestyle/kucaiured">Kuća i ured</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lifestyle/putovanja">Putovanja</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/lifestyle/bebe">Bebe</a></div></li>
+                        </ul>
+                    </li>
+                    <li class="li_scitech">
+                        <div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/scitech" class="tch_scitech"><div class="kocka bg_scitech"></div> Scitech</a> <i ng-click="expandedData.scitech = !expandedData.scitech;" class="" ng-class="{'icon_chevron_gore': expandedData.scitech, 'icon_chevron_dole': !expandedData.scitech}"></i></div>
+                        <ul class="nivo1" ng-class="{'visible': expandedData.scitech}">
+                            <mark class="strelica"></mark>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/scitech/nauka">Nauka</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/scitech/tehnologija">Tehnologija</a></div></li>
+                        </ul>
+                    </li>
+                    <li class="li_auto">
+                        <div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/auto" class="tch_auto"><div class="kocka bg_auto"></div> Auto</a> <i ng-click="expandedData.auto = !expandedData.auto;" class="" ng-class="{'icon_chevron_gore': expandedData.auto, 'icon_chevron_dole': !expandedData.auto}"></i></div>
+                        <ul class="nivo1" ng-class="{'visible': expandedData.auto}">
+                            <mark class="strelica"></mark>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/auto/testovi">Testovi</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/auto/noviteti">Noviteti</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/auto/koncepti">Koncepti</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/auto/tuning">Tuning</a></div></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="ulsep"></div>
+                <ul class="more">
+                    <li class="li_forum"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://forum.klix.ba"><i class="icon_forum pointer"></i> Forum</a></div></li>
+                    <li class="li_krizaljka"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/krizaljka"><i class="icon_krizaljka pointer"></i>Križaljka</a></div></li>
+                    <li class="li_nightlife"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/nightlife"><i class="icon_nightlife pointer"></i>Nightlife</a></div></li>
+                    <li class="li_info hidden-xs">
+                        <div class="item"><a href="#"><div class="kocka bg_klix"></div>Više</a> <i ng-click="expandedData.info = !expandedData.info" class="more" ng-class="{'icon_chevron_gore': expandedData.info, 'icon_chevron_dole': !expandedData.info}"></i></div>
+                        <ul class="nivo1" ng-class="{'visible': expandedData.info}">
+                            <mark class="strelica"></mark>
+                            <li class="visible-md"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/krizaljka">Križaljka</a></div></li>
+                            <li class="visible-md"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/forum">Forum</a></div></li>
+                            <li class="visible-md"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/nightlife">Nightlife</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/dojavi-vijest">Dojavi vijest</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vrijeme">Vremenska prognoza</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/tv-program">TV program</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/stanje-na-putevima">Stanje na putevima</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/kursna-lista">Kursna lista</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://marketing.klix.ba">Marketing</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/impressum">Impressum</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/o-nama">O nama</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/kontakt">Kontakt</a></div></li>
+                        </ul>
+                    </li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/krizaljka"><i class="icon_krizaljka pointer"></i> Križaljka</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/forum"><i class="icon_forum pointer"></i> Forum</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/nightlife"><i class="icon_nightlife pointer"></i> Nightlife</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/dojavi-vijest"><i class="icon_posalji_vijest pointer"></i> Dojavi vijest</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/tv-program"><i class="icon_tv pointer"></i> TV program</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/vrijeme"><div class="kocka"></div> Vremenska prognoza</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/stanje-na-putevima"><div class="kocka"></div> Stanje na putevima</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/kursna-lista"><div class="kocka"></div> Kursna lista</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="http://marketing.klix.ba"><div class="kocka"></div> Marketing</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/impressum"><div class="kocka"></div> Impressum</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/o-nama"><div class="kocka"></div> O nama</a></div></li>
+                    <li class="visible-xs"><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/kontakt"><div class="kocka"></div> Kontakt</a></div></li>
+                </ul>
+            </nav>
+            <div class="buttons_wrap">
+                <ul class="action_buttons">
+                    <div class="ulsep hidden-xs"></div>
+                    <li>
+                        <div class="item pretraga-lupa"><a onClick="ga('send', 'event', 'Header', 'Click', '');" ng-click="toggleSearch()" class="tch_klix pointer"><i class="search_btn pointer" ng-class="{'icon_search': !search_on, 'icon_x': search_on}"></i></a></div>
+                    </li>
+                    <div class="ulsep"></div>
+                    <li>
+                        <div class="item user-icon "><a class="pointer" onClick="ga('send', 'event', 'Header', 'Click', '');" ng-click="login();" ng-class="{'user_logged': $root.currUser}"><i ng-style="{backgroundColor: $root.currUser ? '#'+$root.currUser.avatar : 'transparent'}" class="icon_musko" ng-class="{'icon_user': !$root.currUser, 'icon_musko': $root.currUser.spol == 'm', 'icon_zensko': $root.currUser.spol == 'f'}"></i> <span ng-show="notificationLampica" class="notif-badge"></span></a></div>
+
+                        <ul class="nivo1" ng-if="$root.currUser">
+                            <mark class="strelica" ng-style="{borderColor: $root.currUser ? 'transparent transparent #'+$root.currUser.avatar+' transparent' : 'transparent'}"></mark>
+                            <li class="li_user" ng-style="{backgroundColor: $root.currUser ? '#'+$root.currUser.avatar : 'transparent'}"><div class="item"><a class="username-link ellipsis" href="/mojprofil"><div class="kocka"></div>{{$root.currUser.username}}</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/mojprofil/obavijesti"><i class="icon_obavijesti"></i> Obavijesti <span class="notif-broj" ng-if="notifikacijeBroj > 0">{{notifikacijeBroj}}</span></a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/mojprofil/komentari"><i class="icon_komentari"></i> Moji komentari</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="/mojprofil/postavke"><i class="icon_postavke_profila"></i> Postavke profila</a></div></li>
+                            <li><div class="item"><a onClick="ga('send', 'event', 'Header', 'Click', '');" href="#" ng-click="logout();"><i class="icon_logout"></i> Odjavi se</a></div></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="search_box" ng-class="{'search_on': search_on}">
+            <div class="header_container">
+                <i class="lupa icon_search"></i>
+                <form action="/pretraga" method="GET">
+                    <input id="pojam" type="search" name="pojam" placeholder="upišite pojam pretrage...">
+                    <a class="submitlink" class="pointer" onclick="$(this).closest('form').submit()"><i class="icon_enter pointer"></i></a>
+                </form>
+            </div>
+        </div>
+    </header>
+    <popup data-unique-id="prijava-box" data-show-footer="hidden" data-header-title="Prijava">
+        <div class="prijava-popupbox col-xs-12" ng-controller="LoginCtrl">
+            <div class="error" ng-show="error">{{error}}</div>
+            <div class="col-xs-8 no-padding">Korisničko ime ili e-mail</div>
+            <div class="col-xs-4 no-padding"></div>
+            <div class="col-xs-12 no-padding"><input class="col-xs-12" id="username" ng-enter="login();" ng-model="user.username" type="text" /></div>
+            <div class="col-xs-8 no-padding">Lozinka</div>
+
+            <div class="col-xs-12 no-padding"><input class="col-xs-12" id="password" ng-enter="login()" ng-model="user.password" type="password" /></div>
+            <div class="col-xs-8 no-padding zapamti"><label><input type="checkbox" />Zapamti me</label></div>
+            <div class="col-xs-4 no-padding"><button type="button" ng-click="login();" class="pull-right" id="prijava-req">Prijavi se</button></div>
+            <div class="ili-separator col-xs-12 no-padding">
+                <div class="lajna"></div>
+                <div class="krug-ili">ili</div>
+            </div>
+            <div class="luser gumbi row">
+                <div class="col-xs-12"><div class="gumb fb" ng-click="fbLogin();">Facebook prijava</div></div>
+                <div class="col-xs-12 hidden"><div class="gumb gp">Google prijava</div></div>
+                <div class="col-xs-12"><a href="/registracija" ng-click="closePopup();" class="gumb ws">Registruj se</a></div>
+            </div>
+            <br><br>
+        </div>
+    </popup>
+    <popup data-unique-id="zaboravljen-box" data-show-footer="hidden" data-header-title="Zaboravljena šifra">
+        <div class="prijava-popupbox col-xs-12">
+            <div class="col-xs-8 no-padding">Unesite e-mail:</div>
+            <div class="col-xs-4 no-padding"></div>
+            <div class="col-xs-12 no-padding"><input class="col-xs-12" id="email" ng-enter="reqReset();" ng-model="email" type="text"></div>
+            <div class="col-xs-8 no-padding"></div>
+            <div class="col-xs-4 no-padding"><button type="button" ng-click="reqReset();" class="pull-right" id="prijava-req">Zatraži novu</button></div>
+            <br><br>
+        </div>
+    </popup>
+    <div class="wallpaper_container">
+        <div id='ads_wallpaper'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function () { googletag.display('ads_wallpaper'); });
+            </script>
+        </div>
+    </div>
+    <div class="takeover_container">
+        <div id='ads_takeover'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function () { googletag.display('ads_takeover'); });
+            </script>
+        </div>
+    </div>
+    <div class="main-view">
+        <div class="container">
+            <div class="ads_leaderboard_container lc0">
+                <div class="ads_leaderboard_inside">
+
+                    <div id='ads_leaderboard'>
+                        <script type='text/javascript'>
+                            googletag.cmd.push(function () { googletag.display('ads_leaderboard'); });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" ng-controller="PocetnaCtrl">
+            <div class="block first struct">
+                <div class="block-dyn">
+                    <div class="block-head main hidden-xs">
+                        <div class="col-sm-4 col-md-4 logoHolder">
+                            <div>
+                                <a href="/najnovije" class="dan">
+                                    srijeda, 17.02.2016.
+                                </a>
+                            </div>
+                            <div class="vremenska hidden-md hidden-sm hidden-xs">
+                                <span class="pull-left ikonica vr vr-clear-dark vr-mini"></span>
+                                <div class="grad_vr pull-left">
+                                    <a href="/vrijeme">Sarajevo</a><br>
+                                    <span>19 °C</span>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="col-md-8 col-sm-8 timeline">
+                            <div class="keypoint active" data-id="16918" ng-click="loadDyn('16918');" onclick="ga('send', 'event', 'Timeline tacka', 'Click', '');">
+                                Trenutno <div class="kruznitok">
+                                    <div class="thedot"></div>
+                                </div>
+                            </div>
+                            <div class="keypoint" data-id="16910" ng-click="loadDyn('16910');" onclick="ga('send', 'event', 'Timeline tacka', 'Click', '');">
+                                16:04 <div class="kruznitok">
+                                    <div class="thedot"></div>
+                                </div>
+                            </div>
+                            <div class="keypoint" data-id="16897" ng-click="loadDyn('16897');" onclick="ga('send', 'event', 'Timeline tacka', 'Click', '');">
+                                13:27 <div class="kruznitok">
+                                    <div class="thedot"></div>
+                                </div>
+                            </div>
+                            <div class="keypoint" data-id="16890" ng-click="loadDyn('16890');" onclick="ga('send', 'event', 'Timeline tacka', 'Click', '');">
+                                12:05 <div class="kruznitok">
+                                    <div class="thedot"></div>
+                                </div>
+                            </div>
+                            <div class="keypoint" data-id="d20160216" ng-click="loadDyn('d20160216');" onclick="ga('send', 'event', 'Timeline tacka', 'Click', '');">
+                                Jučer <div class="kruznitok">
+                                    <div class="thedot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="row block-head visible-xs timelinePicker" ng-click="timelineShow = !timelineShow">
+                        <div class="col-xs-8 now">
+                            srijeda, 17.02.2016.
+                        </div>
+                        <div class="col-xs-3 text-right"></div>
+                        <div class="col-xs-1 text-right">
+                            <div class="timelineArrow">
+                                <i class="icon_chevron_{{timelineShow ? 'gore' : 'dole'}}"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="keypoints row" style="height: {{timelineShow ? 45*5 : 0}}px;">
+                        <div class="keypoint" data-id="16918" ng-click="loadDyn('16918');" onclick="ga('send', 'event', 'Timeline tacka - mobile', 'Click', '');">
+                            Trenutno
+                        </div>
+                        <div class="keypoint" data-id="16910" ng-click="loadDyn('16910');" onclick="ga('send', 'event', 'Timeline tacka - mobile', 'Click', '');">
+                            16:04
+                        </div>
+                        <div class="keypoint" data-id="16897" ng-click="loadDyn('16897');" onclick="ga('send', 'event', 'Timeline tacka - mobile', 'Click', '');">
+                            13:27
+                        </div>
+                        <div class="keypoint" data-id="16890" ng-click="loadDyn('16890');" onclick="ga('send', 'event', 'Timeline tacka - mobile', 'Click', '');">
+                            12:05
+                        </div>
+                        <div class="keypoint" data-id="d20160216" ng-click="loadDyn('d20160216');" onclick="ga('send', 'event', 'Timeline tacka - mobile', 'Click', '');">
+                            Jučer
+                        </div>
+                    </div>
+                    <div class="block-news dyn">
+                        <div class="news-line has_big"><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/vijesti/svijet/turska-velika-eksplozija-ispred-kasarne-u-ankari-nekoliko-osoba-povrijedjeno/160217117"><div class="above"><span class="kategorija tc_vijesti">Svijet</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217117.jpg?v=2"><div class="overblack"></div></div><h1 class="srednji">Turska: Velika eksplozija ispred kasarne u Ankari, nekoliko osoba povrijeđeno</h1><div class="uvod">Kako javljaju turski mediji u Ankari se dogodila velika eksplozija u jednoj vojnoj kasarni,...</div><div class="below l0"><span class="hidden-md hidden-sm date">prije 5 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 5 min</span><span class="comments"><i class="icon_komentari"></i> 4</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-6 col-sm-6 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/lifestyle/putovanja/emilija-iz-tesnja-i-adam-iz-juznoafricke-republike-zajedno-plove-kruzerom-i-kroz-bracne-vode/160217051"><div class="above"><span class="kategorija tc_lifestyle">Putovanja<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 6</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/l21_160217051.jpg?v=1"><div class="overblack"></div></div><h1 class="veliki">Emilija iz Tešnja i Adam iz Južnoafričke Republike zajedno plove kruzerom i kroz bračne vode</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 46 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 46 min</span><span class="comments"><i class="icon_komentari"></i> 28</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12 last"><div class="articleHolder"><article class="kartica velika"><a href="/vijesti/bih/washington-post-podsjetio-na-opsadu-sarajeva-330-granata-dnevno-je-padalo-na-grad/160217108"><div class="above"><span class="kategorija tc_vijesti">BiH<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 77</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217108.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Washington Post podsjetio na opsadu Sarajeva: 330 granata dnevno je padalo na grad</h1><div class="uvod">Američki Washington Post objavio je tekst o najdužim opsadama gradova u historiji, kojima...</div><div class="below l0"><span class="hidden-md hidden-sm date">prije 42 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 42 min</span><span class="comments"><i class="icon_komentari"></i> 60</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div><div class="news-line has_four"><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/vijesti/bih/sda-ne-raspolaze-detaljima-u-vezi-s-radoncicevom-izjavom-o-podrsci-sda-za-njegovu-kandidaturu/160217027"><div class="above"><span class="kategorija tc_vijesti">BiH</span><span class="shareovi"><i class="icon_dijeljenja"></i> 5</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217027.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">SDA ne raspolaže detaljima u vezi s Radončićevom izjavom o podršci SDA za njegovu kandidaturu</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 1h 52 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 1h 52 min</span><span class="comments"><i class="icon_komentari"></i> 58</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/vijesti/bih/nakon-javnog-pisma-dodiku-visegradjanin-njegos-tomic-strajkovat-ce-gladju-pred-vladom-rs-a/160217116"><div class="above"><span class="kategorija tc_vijesti">BiH</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217116.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Nakon javnog pisma Dodiku, Višegrađanin Njegoš Tomić štrajkovat će glađu pred Vladom RS-a</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 18 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 18 min</span><span class="comments"><i class="icon_komentari"></i> 19</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/magazin/muzika/bh-pjevacica-sheyla-na-muzickom-takmicenju-music-i-o/160217058"><div class="above"><span class="kategorija tc_magazin">Muzika<i class="mark icon_video"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 2</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217058.jpg?v=2"><div class="overblack"></div></div><h1 class="srednji">Bh. pjevačica Sheyla na muzičkom takmičenju Music I/O</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 1h 10 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 1h 10 min</span><span class="comments"><i class="icon_komentari"></i> 13</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12 last"><div class="articleHolder"><article class="kartica velika obojena bg_magazin"><a href="/magazin/zanimljivosti/japan-majka-natjerala-kcerku-da-pojede-30-zlatnih-ribica/160217062"><div class="above"><span class="kategorija tc_magazin">Zanimljivosti</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217062.jpg?v=2"><div class="overblack"></div></div><h1 class="srednji">Japan: Majka natjerala kćerku da pojede 30 zlatnih ribica</h1><div class="below l0"><span class="hidden-md hidden-sm date"><i class="icon_popularno"></i> prije 56 min</span><span class="visible-md-inline-block visible-sm-inline-block date"><i class="icon_popularno"></i> prije 56 min</span><span class="comments"><i class="icon_komentari"></i> 19</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div>
+                    </div>
+                </div>
+                <div class="hidden-xs block-side block-flex">
+                    <div class="block-tabs" ng-init="tab=1;"><div class="col-xs-4 active" ng-click="tab=1;" ng-class="{'active': tab==1}"><div class="tab left">Najnovije</div></div><div class="col-xs-4" ng-click="tab=2;" ng-class="{'active': tab==2}"><div class="tab middle">Najčitanije</div></div><div class="col-xs-4" ng-click="tab=3;" ng-class="{'active': tab==3}"><div class="tab right">Preporuke</div></div><div class="clearfix"></div></div><div class="block-flex-1" ng-scroll="scrollNajnovije(top);" scrolltimer><div class="row" ng-class="{'hidden': tab != 1}"><div class="clearfix"></div><div class="articleList col-md-12 col-lg-12"><a href="/vijesti/svijet/turska-velika-eksplozija-ispred-kasarne-u-ankari-nekoliko-osoba-povrijedjeno/160217117" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Turska: Velika eksplozija ispred kasarne u Ankari, nekoliko osoba povrijeđeno</div><div class="date bottom"><div class="pull-left">prije 5 min</div><div class="icons"></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/vijesti/svijet/velika-britanija-poslala-lovce-u-presretanje-ruskih-bombardera/160217119" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Velika Britanija poslala lovce u presretanje ruskih bombardera</div><div class="date bottom"><div class="pull-left">prije 10 min</div><div class="icons"></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/nakon-javnog-pisma-dodiku-visegradjanin-njegos-tomic-strajkovat-ce-gladju-pred-vladom-rs-a/160217116" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Nakon javnog pisma Dodiku, Višegrađanin Njegoš Tomić štrajkovat će glađu pred Vladom RS-a</div><div class="date bottom"><div class="pull-left">prije 18 min</div><div class="icons"></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/washington-post-podsjetio-na-opsadu-sarajeva-330-granata-dnevno-je-padalo-na-grad/160217108" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 last-xs" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Washington Post podsjetio na opsadu Sarajeva: 330 granata dnevno je padalo na grad</div><div class="date bottom"><div class="pull-left">prije 42 min</div><div class="icons"><i class="icon_foto"></i></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/lifestyle/putovanja/emilija-iz-tesnja-i-adam-iz-juznoafricke-republike-zajedno-plove-kruzerom-i-kroz-bracne-vode/160217051" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 last-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Emilija iz Tešnja i Adam iz Južnoafričke Republike zajedno plove kruzerom i kroz bračne vode</div><div class="date bottom"><div class="pull-left">prije 46 min</div><div class="icons"><i class="icon_foto"></i></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/vijesti/svijet/austrija-ce-smanjiti-broj-dolazaka-izbjeglica-na-3-200-dnevno/160217114" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Austrija će smanjiti broj dolazaka izbjeglica na 3.200 dnevno</div><div class="date bottom"><div class="pull-left">prije 47 min</div><div class="icons"></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/magazin/zanimljivosti/japan-majka-natjerala-kcerku-da-pojede-30-zlatnih-ribica/160217062" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Japan: Majka natjerala kćerku da pojede 30 zlatnih ribica</div><div class="date bottom"><div class="pull-left">prije 56 min</div><div class="icons"></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/vijesti/svijet/merkel-samit-eu-ce-odluciti-da-li-je-sporazum-s-turskom-vrijedan-truda/160217113" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Merkel: Samit EU će odlučiti da li je sporazum s Turskom vrijedan truda</div><div class="date bottom"><div class="pull-left">prije 57 min</div><div class="icons"></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/biznis/mladi-poduzetnici-iz-regije-srebrenice-pokrecu-vlastiti-biznis/160217112" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Mladi poduzetnici iz regije Srebrenice pokreću vlastiti biznis</div><div class="date bottom"><div class="pull-left">prije 1h 1 min</div><div class="icons"></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a><a href="/magazin/muzika/bh-pjevacica-sheyla-na-muzickom-takmicenju-music-i-o/160217058" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-12 col-sm-12"><div class="title">Bh. pjevačica Sheyla na muzičkom takmičenju Music I/O</div><div class="date bottom"><div class="pull-left">prije 1h 10 min</div><div class="icons"><i class="icon_video"></i></div><div class="clearfix"></div></div></div><div class="clearfix"></div></div></a></div></div><div class="row hidden" ng-class="{'hidden': tab != 2}"><div class="clearfix"></div><div class="articleList col-md-12 col-lg-12"><a href="/vijesti/bih/fahrudin-radoncic-izasao-iz-pritvora/160217065" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160217065.jpg?v=1" alt="Fahrudin Radončić izašao iz pritvora" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Fahrudin Radončić izašao iz pritvora</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/mehmedovic-porucio-vrhu-sda-dokle-vise-ponizavate-vlastiti-narod/160216167" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160216167.jpg" alt="Mehmedović poručio vrhu SDA: Dokle više ponižavate vlastiti narod" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Mehmedović poručio vrhu SDA: Dokle više ponižavate vlastiti narod</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/pogledajte-kako-su-radoncica-docekali-ispred-avaz-twist-towera-fahro-legendo/160217092" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160217092.jpg?v=1" alt="Pogledajte kako su Radončića dočekali ispred Avaz Twist Towera: Fahro, legendo" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Pogledajte kako su Radončića dočekali ispred Avaz Twist Towera: Fahro, legendo</div></div><div class="clearfix"></div></div></a><a href="/biznis/koliko-ce-cigarete-poskupjeti-u-narednim-godinama/160111016" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 last-xs" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160111016.jpg" alt="Koliko će cigarete poskupjeti u narednim godinama?" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Koliko će cigarete poskupjeti u narednim godinama?</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/fahrudinu-radoncicu-ukinut-pritvor-odredjene-mjere-zabrane/160216114" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 last-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160216114.jpg?v=1" alt="Fahrudinu Radončiću ukinut pritvor, određene mjere zabrane" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Fahrudinu Radončiću ukinut pritvor, određene mjere zabrane</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/gorazde-fotografi-na-meti-trzisnih-inspektora-koji-kazu-da-samo-rade-svoj-posao/160216159" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160216159.jpg?v=1" alt="Goražde: Fotografi na meti tržišnih inspektora koji kažu da samo rade svoj posao" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Goražde: Fotografi na meti tržišnih inspektora koji kažu da samo rade svoj posao</div></div><div class="clearfix"></div></div></a><a href="/biznis/akcize-na-gorivo-vece-za-15-feninga-po-litru-prijevoznici-prijete-blokadama/160217016" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160217016.jpg?v=1" alt="Akcize na gorivo veće za 15 feninga po litru, prijevoznici prijete blokadama" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Akcize na gorivo veće za 15 feninga po litru, prijevoznici prijete blokadama</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/radoncic-nakon-izlaska-iz-pritvora-nije-vrijeme-da-govorim-ko-mi-montira-koalicija-je-stabilna/160217068" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160217068.jpg?v=1" alt="Radončić nakon izlaska iz pritvora: Nije vrijeme da govorim ko mi montira, koalicija je stabilna" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Radončić nakon izlaska iz pritvora: Nije vrijeme da govorim ko mi montira, koalicija je stabilna</div></div><div class="clearfix"></div></div></a><a href="/sport/nogomet/cristiano-ronaldo-napustio-konferenciju-za-novinare/160217002" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160217002.jpg?v=1" alt="Cristiano Ronaldo napustio konferenciju za novinare" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Cristiano Ronaldo napustio konferenciju za novinare</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/borenovic-dodik-je-uputio-poziv-na-otvoreni-linc-igora-crnadka-slijedi-tuzba/160216123" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><img src="http://static.klix.ba/media/images/vijesti/s11_160216123.jpg?v=1" alt="Borenović: Dodik je uputio poziv na otvoreni linč Igora Crnadka, slijedi tužba" class="articleImg" width="100%"></div><div class="col-xs-9 col-sm-9"><div class="title">Borenović: Dodik je uputio poziv na otvoreni linč Igora Crnadka, slijedi tužba</div></div><div class="clearfix"></div></div></a></div></div><div class="row hidden" ng-class="{'hidden': tab != 3}"><div class="clearfix"></div><div class="articleList col-md-12 col-lg-12"><a href="/vijesti/bih/mehmedovic-porucio-vrhu-sda-dokle-vise-ponizavate-vlastiti-narod/160216167" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">843</div></div><div class="col-xs-9 col-sm-9"><div class="title">Mehmedović poručio vrhu SDA: Dokle više ponižavate vlastiti narod</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/fahrudin-radoncic-izasao-iz-pritvora/160217065" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">829</div></div><div class="col-xs-9 col-sm-9"><div class="title">Fahrudin Radončić izašao iz pritvora</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/pogledajte-kako-su-radoncica-docekali-ispred-avaz-twist-towera-fahro-legendo/160217092" class="col-lg-12 col-md-12 col-sm-6 col-xs-12" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">583</div></div><div class="col-xs-9 col-sm-9"><div class="title">Pogledajte kako su Radončića dočekali ispred Avaz Twist Towera: Fahro, legendo</div></div><div class="clearfix"></div></div></a><a href="/sport/najbolji-svjetski-skakaci-u-vodu-ponovo-u-mostaru/160217082" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 last-xs" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">422</div></div><div class="col-xs-9 col-sm-9"><div class="title">Najbolji svjetski skakači u vodu ponovo u Mostaru</div></div><div class="clearfix"></div></div></a><a href="/sport/igor-emkic-se-priprema-za-turnir-no-limit-8-spreman-sam-za-izazove-u-ringu-protivnici-ne-znaju-sta-ih-ceka/160216031" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 last-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">408</div></div><div class="col-xs-9 col-sm-9"><div class="title">Igor Emkić se priprema za turnir No Limit 8: Spreman sam za izazove u ringu, protivnici ne znaju šta ih čeka</div></div><div class="clearfix"></div></div></a><a href="/sport/tenis/konacno-damir-dzumhur-pobijedio-ricardasa-berankisa/160216154" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">369</div></div><div class="col-xs-9 col-sm-9"><div class="title">Konačno: Damir Džumhur pobijedio Ricardasa Berankisa</div></div><div class="clearfix"></div></div></a><a href="/biznis/akcize-na-gorivo-vece-za-15-feninga-po-litru-prijevoznici-prijete-blokadama/160217016" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">349</div></div><div class="col-xs-9 col-sm-9"><div class="title">Akcize na gorivo veće za 15 feninga po litru, prijevoznici prijete blokadama</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/majstor-karatea-armin-topalovic-skola-nas-uci-svemu-osim-zivotu/160216156" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">341</div></div><div class="col-xs-9 col-sm-9"><div class="title">Majstor karatea Armin Topalović: Škola nas uči svemu osim životu</div></div><div class="clearfix"></div></div></a><a href="/vijesti/bih/fahrudinu-radoncicu-ukinut-pritvor-odredjene-mjere-zabrane/160216114" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">232</div></div><div class="col-xs-9 col-sm-9"><div class="title">Fahrudinu Radončiću ukinut pritvor, određene mjere zabrane</div></div><div class="clearfix"></div></div></a><a href="/lifestyle/prva-balerina-sa-hidzabom-stephanie-kurlow-zeli-zbliziti-svijet/160217012" class="col-lg-12 col-md-12 col-sm-6 col-xs-12 hidden-xs hidden-md" onclick="ga('send', 'event', 'Najbox klik', 'Click', '');"><div class="row"><div class="col-xs-3"><div class="share-count-box">158</div></div><div class="col-xs-9 col-sm-9"><div class="title">Prva balerina sa hidžabom: Stephanie Kurlow želi zbližiti svijet</div></div><div class="clearfix"></div></div></a></div></div></div> <div class="block-flex-2">
+                        <div class="full-shadow"></div>
+                        <div class="row">
+                            <div class="popularnoHolder hidden-xs">
+                                <div class="block-title popularno col-lg-12 col-md-12 col-sm-3 col-xs-12">
+                                    <i class="title-icon icon_popularno"></i> Popularno
+                                    <a class="pull-right hidden-sm btn" href="/tagovi">Vidi sve <i class="icon_strelica_desno onTheRight"></i></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-9 col-xs-12 tagovi">
+                                    <a href="/tagovi/saobracajna-nesreca/281" class="tag">saobraćajna nesreća</a><a href="/tagovi/tuzilastvo-bih/354" class="tag">Tužilaštvo BiH</a><a href="/tagovi/sarajevo/23" class="tag">Sarajevo</a><a href="/tagovi/fahrudin-radoncic/138" class="tag">Fahrudin Radončić</a><a href="/tagovi/sirija/234" class="tag">Sirija</a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="banner300 text-center">
+                                <div class="ads_rectangle_container">
+                                    <div class="ads_leaderboard_inside">
+                                        <div id='ads_rectangle'>
+                                            <script type='text/javascript'>
+                                                googletag.cmd.push(function () { googletag.display('ads_rectangle'); });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="container">
+                <div class="ads_leaderboard_container lc1">
+                    <div class="ads_leaderboard_inside">
+
+                        <div id='ads_leaderboard_1'>
+                            <script type='text/javascript'>
+                                googletag.cmd.push(function () { googletag.display('ads_leaderboard_1'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="block struct struct_12">
+                <div class="block-dyn">
+                    <div class="block-head">
+                        <div class="col-md-2 col-sm-12 heading">
+                            <div class="kocka" style="background-color: #d33d3d"></div> <a href="/vijesti" class="headingUrl tch_vijesti">Vijesti</a>
+                        </div>
+                        <div class="col-md-10 block-links hidden-sm hidden-xs">
+                            <a class="tch_vijesti" href="/vijesti/bih">BiH</a>
+                            <div class="seperator">|</div> <a class="tch_vijesti" href="/vijesti/regija">Regija</a>
+                            <div class="seperator">|</div> <a class="tch_vijesti" href="/vijesti/svijet">Svijet</a>
+                            <div class="seperator">|</div> <a class="tch_vijesti" href="/vijesti/kultura">Kultura</a>
+                            <div class="seperator">|</div> <a class="tch_vijesti" href="/vijesti/crna-hronika">Crna hronika</a>
+                            <div class="seperator hidden-md">|</div> <a class="tch_vijesti hidden-md" href="/vijesti/eu-integracije">EU integracije</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="block-news">
+                        <div class="news-line has_four"><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/vijesti/svijet/velika-britanija-poslala-lovce-u-presretanje-ruskih-bombardera/160217119"><div class="above"><span class="kategorija tc_vijesti">Svijet</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217119.jpg"><div class="overblack"></div></div><h1 class="srednji">Velika Britanija poslala lovce u presretanje ruskih bombardera</h1><div class="below l0"><span class="hidden-md hidden-sm date tc_vijesti"><i class="icon_popularno"></i> prije 10 min</span><span class="visible-md-inline-block visible-sm-inline-block date tc_vijesti"><i class="icon_popularno"></i> prije 10 min</span><span class="comments"><i class="icon_komentari"></i> 7</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/vijesti/svijet/merkel-samit-eu-ce-odluciti-da-li-je-sporazum-s-turskom-vrijedan-truda/160217113"><div class="above"><span class="kategorija tc_vijesti">Svijet</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217113.jpg"><div class="overblack"></div></div><h1 class="srednji">Merkel: Samit EU će odlučiti da li je sporazum s Turskom vrijedan truda</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 57 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 57 min</span><span class="comments"><i class="icon_komentari"></i> 15</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/vijesti/bih/svjedoci-na-sudjenju-u-tuzilastvu-bih-muamir-jasarevic-babo-nas-je-mucio-strujom/160217096"><div class="above"><span class="kategorija tc_vijesti">BiH</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217096.jpg"><div class="overblack"></div></div><h1 class="srednji">Svjedoci na suđenju u Tužilaštvu BiH: Muamir Jašarević Babo nas je mučio strujom</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 1h 53 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 1h 53 min</span><span class="comments"><i class="icon_komentari"></i> 18</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12 last"><div class="articleHolder"><article class="kartica velika"><a href="/vijesti/kultura/skupljaci-perja-u-banjoj-luci-svi-mi-zivimo-kao-cigani-sa-maturom/160217098"><div class="above"><span class="kategorija tc_vijesti">Kultura<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217098.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">"Skupljači perja" u Banjoj Luci: Svi mi živimo "kao Cigani sa maturom"</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 2h 1 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 2h 1 min</span><span class="comments"><i class="icon_komentari"></i> 6</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div><div class="news-line has_four"><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica bez_slike"><a href="/vijesti/svijet/austrija-ce-smanjiti-broj-dolazaka-izbjeglica-na-3-200-dnevno/160217114"><div class="above"><span class="kategorija tc_vijesti">Svijet</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><h1>Austrija će smanjiti broj dolazaka izbjeglica na 3.200 dnevno</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 47 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 47 min</span><span class="comments"><i class="icon_komentari"></i> 1</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica bez_slike"><a href="/vijesti/bih/zbog-jakog-vjetra-otkazani-letovi-na-aerodromu-sarajevo/160217109"><div class="above"><span class="kategorija tc_vijesti">BiH</span><span class="shareovi"><i class="icon_dijeljenja"></i> 4</span></div><h1>Zbog jakog vjetra otkazani letovi na Aerodromu Sarajevo</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 1h 43 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 1h 43 min</span><span class="comments"><i class="icon_komentari"></i> 16</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica bez_slike"><a href="/vijesti/kultura/sarajevska-zima-mala-sirena-u-sklopu-djecijeg-programa/160217107"><div class="above"><span class="kategorija tc_vijesti">Kultura</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><h1>Sarajevska zima: "Mala sirena" u sklopu dječijeg programa</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 1h 55 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 1h 55 min</span><span class="comments"><i class="icon_komentari"></i> 1</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12 last"><div class="articleHolder"><article class="kartica bez_slike"><a href="/vijesti/regija/hrvatska-islamska-zajednica-se-ogradila-od-podrske-ministru-zlatku-hasanbegovicu/160217101"><div class="above"><span class="kategorija tc_vijesti">Regija</span><span class="shareovi"><i class="icon_dijeljenja"></i> 5</span></div><h1>Hrvatska: Islamska zajednica se ogradila od podrške ministru Zlatku Hasanbegoviću</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 2h 31 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 2h 31 min</span><span class="comments"><i class="icon_komentari"></i> 78</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div><div class="load-more visible-xs" onclick="ga('send', 'event', 'Mobilna prikaži više', 'Click', '');">prikaži više</div>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm block-side block-flex">
+                    <div class="block-title">
+                        <i class="icon_popularno title-icon f16" style="color: #d33d3d;"></i> Izdvojeno <img src="/images/gradient-up.png" class="g-up visible-lg" ng-class="blok.inScroll ? 'inScroll' : ''">
+                    </div>
+                    <div class="block-flex-1" scrolltimer>
+                        <div class="izdvojeneList row theme_pocetna"><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/biznis/koliko-ce-cigarete-poskupjeti-u-narednim-godinama/160111016" class="tch_biznis"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #77716f"><img src="http://static.klix.ba/media/images/vijesti/s11_160111016.jpg"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Koliko će cigarete poskupjeti u narednim godinama?</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/vijesti/bih/uvela-znakovni-jezik-radi-jednog-ucenika-bh-gradjani-traze-da-se-nagradi-uciteljica-sanela-ljumanovic/160215064" class="tch_vijesti"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #37322a"><img src="http://static.klix.ba/media/images/vijesti/s11_160215064.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Uvela znakovni jezik radi jednog učenika: Bh. građani traže da se nagradi učiteljica Sanela Ljumanović</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/vijesti/bih/koje-zemlje-nisu-priznale-bih-uspostavljene-diplomatske-odnose-imamo-sa-172-drzave/160215085" class="tch_vijesti"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #363f30"><img src="http://static.klix.ba/media/images/vijesti/s11_160215085.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Koje zemlje nisu priznale BiH: Uspostavljene diplomatske odnose imamo sa 172 države</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/magazin/sigurnost-i-efikasnost-lasera-u-podmladjivanju-uklanjanju-dlacica-kapilara-pjega/160215060" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #c3bab9"><img src="http://static.klix.ba/media/images/vijesti/s11_160215060.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Sigurnost i efikasnost lasera u podmlađivanju, uklanjanju dlačica, kapilara, pjega...</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/lifestyle/ruza-i-mustafa-nam-dokazuju-kako-nikad-nije-kasno-za-ljubav-i-pronalazak-srodne-duse/160215045" class="tch_lifestyle"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #925837"><img src="http://static.klix.ba/media/images/vijesti/s11_160215045.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Ruža i Mustafa nam dokazuju kako nikad nije kasno za ljubav i pronalazak srodne duše</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/lifestyle/modailjepota/maneken-iz-visokog-s-angazmanom-u-new-delhiju-za-svaki-uspjeh-je-potrebno-odricanje/160209061" class="tch_lifestyle"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #cecece"><img src="http://static.klix.ba/media/images/vijesti/s11_160209061.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Maneken iz Visokog s angažmanom u New Delhiju: Za svaki uspjeh je potrebno odricanje</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow hidden-md"><div class="col-md-12 col-sm-6"><a href="/biznis/kasumovic-bojim-se-da-ce-se-ponoviti-lopovluci-u-privatizaciji-cicic-drzava-prvo-mora-znati-sta-prodaje/160208044" class="tch_biznis"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #bcaca6"><img src="http://static.klix.ba/media/images/vijesti/s11_160208044.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Kasumović: Bojim se da će se ponoviti lopovluci u privatizaciji, Čičić: Država prvo mora znati šta prodaje</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/vijesti/bih/broj-korisnika-javnih-kuhinja-u-banjoj-luci-se-ne-smanjuje/160210133" class="tch_vijesti"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #47453e"><img src="http://static.klix.ba/media/images/vijesti/s11_160210133.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Broj korisnika javnih kuhinja u Banjoj Luci se ne smanjuje</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/biznis/odzak-ce-izgradnjom-koridora-5c-predstavljati-vrata-bih-za-ulaz-turista/160205141" class="tch_biznis"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #4f5643"><img src="http://static.klix.ba/media/images/vijesti/s11_160205141.jpg?v=2"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Odžak će izgradnjom koridora 5C predstavljati vrata BiH za ulaz turista</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow hidden-md"><div class="col-md-12 col-sm-6"><a href="/magazin/muzika/pamela-ramljak-meni-smisao-zivota-nisu-jahta-avioni-i-svaki-dan-nova-chanel-torba/160209024" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #96929b"><img src="http://static.klix.ba/media/images/vijesti/s11_160209024.jpg?v=2"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Pamela Ramljak: Meni smisao života nisu jahta, avioni i svaki dan nova Chanel torba</div><div class="clearfix"></div></div></div></div></a></div></div></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="container">
+                <div class="ads_leaderboard_container lc2">
+                    <div class="ads_leaderboard_inside">
+
+                        <div id='ads_leaderboard_2'>
+                            <script type='text/javascript'>
+                                googletag.cmd.push(function () { googletag.display('ads_leaderboard_2'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="block struct struct_8">
+                <div class="block-dyn">
+                    <div class="block-head">
+                        <div class="col-md-2 col-sm-12 heading">
+                            <div class="kocka" style="background-color: #EF6F3E"></div> <a href="/biznis" class="headingUrl tch_biznis">Biznis</a>
+                        </div>
+                        <div class="col-md-10 block-links hidden-sm hidden-xs">
+                            <a class="tch_biznis" href="/biznis/privreda">Privreda</a>
+                            <div class="seperator">|</div> <a class="tch_biznis" href="/biznis/finansije">Finansije</a>
+                            <div class="seperator">|</div> <a class="tch_biznis" href="/biznis/investicije">Investicije</a>
+                            <div class="seperator">|</div> <a class="tch_biznis" href="/biznis/eurozona">Eurozona</a>
+                            <div class="seperator">|</div> <a class="tch_biznis" href="/biznis/berza">Berza</a>
+                            <div class="seperator hidden-md">|</div> <a class="tch_biznis hidden-md" href="/biznis/startupi">Startupi</a>
+                            <div class="seperator hidden-md">|</div> <a class="tch_biznis hidden-md" href="/biznis/posao">Posao</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="block-news">
+                        <div class="news-line has_four"><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/biznis/mladi-poduzetnici-iz-regije-srebrenice-pokrecu-vlastiti-biznis/160217112"><div class="above"><span class="kategorija tc_biznis">biznis</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217112.jpg"><div class="overblack"></div></div><h1 class="srednji">Mladi poduzetnici iz regije Srebrenice pokreću vlastiti biznis</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 1h 1 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 1h 1 min</span><span class="comments"><i class="icon_komentari"></i> 7</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/biznis/bombardier-ukida-7-000-radnih-mjesta/160217093"><div class="above"><span class="kategorija tc_biznis">biznis</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217093.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Bombardier ukida 7.000 radnih mjesta</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 3h 5 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 3h 5 min</span><span class="comments"><i class="icon_komentari"></i> 7</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/biznis/eutelsat-i-nrm-cetvrti-put-partneri/160217067"><div class="above"><span class="kategorija tc_biznis">biznis</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217067.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Eutelsat i NRM četvrti put partneri</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 4h 39 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 4h 39 min</span><span class="comments"><i class="icon_komentari"></i> 0</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12 last"><div class="articleHolder"><article class="kartica velika"><a href="/biznis/privreda/privredni-gigant-energoinvest-bi-krajem-februara-trebao-dobiti-novog-direktora/160217033"><div class="above"><span class="kategorija tc_biznis">Privreda</span><span class="shareovi"><i class="icon_dijeljenja"></i> 16</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217033.jpg"><div class="overblack"></div></div><h1 class="srednji">Privredni gigant Energoinvest bi krajem februara trebao dobiti novog direktora</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 5h 23 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 5h 23 min</span><span class="comments"><i class="icon_komentari"></i> 32</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div><div class="load-more visible-xs" onclick="ga('send', 'event', 'Mobilna prikaži više', 'Click', '');">prikaži više</div>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm block-side block-flex">
+                    <div class="block-title rel">
+                        <span class="icon_x-logo title-svg-icon"></span> Promo
+                        <a href="http://marketing.klix.ba" class="btn pull-right">
+                            Marketing <i class="icon icon_strelica_desno"></i>
+                        </a>
+                        <img src="/images/gradient-up.png" class="g-up visible-lg" ng-class="blok.inScroll ? 'inScroll' : ''">
+                    </div>
+                    <div class="block-flex-1" ng-scroll="scrollNajcitanije(top, blok);" scrolltimer>
+                        <div class="izdvojeneList row theme_promo"><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/vijesti/bih/zivot-ide-dalje-u-stanu-obnovljenom-uz-pomoc-evropske-unije/160215077" class="tch_vijesti"><div class="vholder"><div class="row"><div class="col-xs-2"><div class="img" style="background-color: #473a39"><img src="http://static.klix.ba/media/images/vijesti/s11_160215077.jpg?v=1"></div></div><div class="col-xs-10 naslovHolder"><div class="naslov">Život ide dalje u stanu obnovljenom uz pomoć Evropske unije</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/magazin/film-tv/peti-val-stize-u-bh-kinodvorane-a-vi-mozete-osvojiti-ulaznice/160216117" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-2"><div class="img" style="background-color: #3b3832"><img src="http://static.klix.ba/media/images/vijesti/s11_160216117.jpg?v=1"></div></div><div class="col-xs-10 naslovHolder"><div class="naslov">"Peti val" stiže u bh. kinodvorane, a vi možete osvojiti ulaznice</div><div class="clearfix"></div></div></div></div></a></div></div></div>
+                    </div>
+                    <div class="block-flex-2 kursna-block">
+                        <div class="row" ng-controller="KursnaCtrlD">
+                            <div class="col-md-12 col-sm-12 konvertor">
+                                <div class="block-title"><i class="title-icon icon_konverter"></i> Konvertor valuta</div>
+                                <div class="konvertorHolder">
+                                    <div class="box_a row no-margin-md no-padding-xs no-margin-lg col-lg-12 col-md-12 no-padding-md no-padding-lg no-padding-sm">
+                                        <div class="txtbox col-xs-8 no-l-padding-md no-l-padding-lg"><input type="text" ng-model="val_a" ng-keyup="calcKurs();" ng-focus="smijer = 0"></div>
+                                        <div class="col-xs-4 no-r-padding-lg">
+                                            <div class="kxSelect">
+                                                <select ng-model="valuta_a" ng-change="calcKurs();" ng-options="kurs.valuta for kurs in kursna"></select>
+                                                <i class="icon_chevron_dole"></i>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row hidden">
+                                        <div class="col-xs-4 col-sm-push-8 text-center smijer" ng-click="smijer = smijer == 0 ? 1 : 0; calcKurs();" ng-class="smijer == 1 ? 'up' : ''">
+                                            <i class="icon_chevron_dole"></i>
+                                        </div>
+                                    </div>
+                                    <div class="box_b row no-margin-md no-padding-xs no-margin-lg col-lg-12 col-md-12 no-padding-md no-padding-lg no-padding-sm">
+                                        <div class="txtbox col-xs-8 no-l-padding-lg"><input type="text" ng-model="val_b" ng-keyup="calcKurs();" ng-focus="smijer = 1"></div>
+                                        <div class="col-xs-4 no-r-padding-lg no-r-padding-md">
+                                            <div class="kxSelect">
+                                                <select ng-model="valuta_b" ng-change="calcKurs();" ng-options="kurs.valuta for kurs in kursna"></select>
+                                                <i class="icon_chevron_dole"></i>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="container">
+                <div class="ads_leaderboard_container lc3">
+                    <div class="ads_leaderboard_inside">
+
+                        <div id='ads_leaderboard_3'>
+                            <script type='text/javascript'>
+                                googletag.cmd.push(function () { googletag.display('ads_leaderboard_3'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="block struct struct_5">
+                <div class="block-dyn">
+                    <div class="block-head">
+                        <div class="col-md-2 col-sm-12 heading">
+                            <div class="kocka" style="background-color: #55AC53"></div> <a href="/sport" class="headingUrl tch_sport">Sport</a>
+                        </div>
+                        <div class="col-md-10 block-links hidden-sm hidden-xs">
+                            <a class="tch_sport" href="/sport/nogomet">Nogomet</a>
+                            <div class="seperator">|</div> <a class="tch_sport" href="/sport/kosarka">Košarka</a>
+                            <div class="seperator">|</div> <a class="tch_sport" href="/sport/tenis">Tenis</a>
+                            <div class="seperator">|</div> <a class="tch_sport" href="/sport/rukomet">Rukomet</a>
+                            <div class="seperator">|</div> <a class="tch_sport" href="/sport/formula1">Formula 1</a>
+                            <div class="seperator hidden-md">|</div> <a class="tch_sport hidden-md" href="/sport/skijanje">Skijanje</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="block-news">
+                        <div class="news-line has_big"><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/sport/nogomet/raspudic-spoj-mladost-i-iskustva-recept-za-povratak-borca-u-vrh-bh-fudbala/160217110"><div class="above"><span class="kategorija tc_sport">Nogomet</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217110.jpg?v=2"><div class="overblack"></div></div><h1 class="srednji">Raspudić: Spoj mladost i iskustva recept za povratak Borca u vrh bh. fudbala</h1><div class="uvod">Fudbaleri Banjalučkog Borca odigrali su i šestu kontrolnu utakmicu u sklopu priprema pred...</div><div class="below l0"><span class="hidden-md hidden-sm date">prije 1h 35 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 1h 35 min</span><span class="comments"><i class="icon_komentari"></i> 6</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-6 col-sm-6 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/sport/tenis/trener-ane-ivanovic-otkrio-uzrok-kolabiranja-na-australian-openu/160217063"><div class="above"><span class="kategorija tc_sport">Tenis</span><span class="shareovi"><i class="icon_dijeljenja"></i> 1</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/l21_160217063.jpg?v=1"><div class="overblack"></div></div><h1 class="veliki">Trener Ane Ivanović otkrio uzrok kolabiranja na Australian Openu</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 2h 20 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 2h 20 min</span><span class="comments"><i class="icon_komentari"></i> 29</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12 last"><div class="articleHolder"><article class="kartica velika"><a href="/sport/najbolji-svjetski-skakaci-u-vodu-ponovo-u-mostaru/160217082"><div class="above"><span class="kategorija tc_sport">sport<i class="mark icon_foto"></i><i class="mark icon_video"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 422</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217082.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Najbolji svjetski skakači u vodu ponovo u Mostaru</h1><div class="uvod">Red Bull Cliff Diving Svjetsko prvenstvo i ove godine dolazi u Bosnu i Hercegovinu.</div><div class="below l0"><span class="hidden-md hidden-sm date">prije 3h 48 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 3h 48 min</span><span class="comments"><i class="icon_komentari"></i> 17</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div><div class="news-line has_four"><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/sport/kosarka/kenan-bajramovic-napusta-spars-i-odlazi-u-turski-socar-petkim/160217103"><div class="above"><span class="kategorija tc_sport">Košarka</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217103.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Kenan Bajramović napušta Spars i odlazi u turski Socar Petkim</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 2h 5 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 2h 5 min</span><span class="comments"><i class="icon_komentari"></i> 8</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/sport/nogomet/gazzeta-dzeko-je-bio-na-meti-real-madrida-sada-ima-priliku-pokazati-sta-su-propustili/160217100"><div class="above"><span class="kategorija tc_sport">Nogomet</span><span class="shareovi"><i class="icon_dijeljenja"></i> 33</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217100.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Gazzeta: Džeko je bio na meti Real Madrida, sada ima priliku pokazati šta su propustili</h1><div class="below l0"><span class="hidden-md hidden-sm date tc_sport"><i class="icon_popularno"></i> prije 2h 31 min</span><span class="visible-md-inline-block visible-sm-inline-block date tc_sport"><i class="icon_popularno"></i> prije 2h 31 min</span><span class="comments"><i class="icon_komentari"></i> 27</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/sport/nogomet/rooney-propusta-mec-protiv-midtjyllanda-u-evropskoj-ligi/160217091"><div class="above"><span class="kategorija tc_sport">Nogomet</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217091.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Rooney propušta meč protiv Midtjyllanda u Evropskoj ligi</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 3h 17 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 3h 17 min</span><span class="comments"><i class="icon_komentari"></i> 9</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-3 col-sm-3 col-xs-12 last"><div class="articleHolder"><article class="kartica velika"><a href="/sport/nogomet/trener-labbadia-zadovoljan-spahic-produzuje-ugovor-sa-hsv-om/160217072"><div class="above"><span class="kategorija tc_sport">Nogomet<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 2</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217072.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Trener Labbadia zadovoljan, Spahić produžuje ugovor sa HSV-om</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 4h 8 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 4h 8 min</span><span class="comments"><i class="icon_komentari"></i> 6</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div><div class="load-more visible-xs" onclick="ga('send', 'event', 'Mobilna prikaži više', 'Click', '');">prikaži više</div>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm block-side block-flex">
+                    <div class="block-title">
+                        <i class="icon_popularno title-icon f16" style="color: #55AC53;"></i> Izdvojeno <a href="/sport" class="btn pull-right">
+                            Vidi sve <i class="icon icon_strelica_desno"></i>
+                        </a>
+                        <img src="/images/gradient-up.png" class="g-up visible-lg" ng-class="blok.inScroll ? 'inScroll' : ''">
+                    </div>
+                    <div class="block-flex-1" scrolltimer>
+                        <div class="izdvojeneList row theme_pocetna"><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/sport/kosarka/kenan-bajramovic-napusta-spars-i-odlazi-u-turski-socar-petkim/160217103" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #3c2f1d"><img src="http://static.klix.ba/media/images/vijesti/s11_160217103.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Kenan Bajramović napušta Spars i odlazi u turski Socar Petkim</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/sport/tenis/del-potro-se-pobjedom-vratio-nakon-skoro-godinu-dana-pauze/160217040" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #506768"><img src="http://static.klix.ba/media/images/vijesti/s11_160217040.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Del Potro se pobjedom vratio nakon skoro godinu dana pauze</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/sport/nogomet/adnan-osmanovic-interesantan-slovackom-klubu-krste-velkoski-odlazi-s-koseva/160217028" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #8b5a65"><img src="http://static.klix.ba/media/images/vijesti/s11_160217028.jpg"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Adnan Osmanović interesantan slovačkom klubu, Krste Velkoski odlazi s Koševa</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/sport/nogomet/zlatan-ibrahimovic-srusio-rekord-lige-prvaka/160217025" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #bbb29e"><img src="http://static.klix.ba/media/images/vijesti/s11_160217025.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Zlatan Ibrahimović srušio rekord Lige prvaka</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/sport/nogomet/cetiri-bh-internacionalca-na-terenu-roma-docekuje-real-vatreno-krstenje-genta-i-wolfsburga-u-osmini-finala-lige-prvaka/160216094" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #45463a"><img src="http://static.klix.ba/media/images/vijesti/s11_160216094.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Četiri bh. internacionalca na terenu: Roma dočekuje Real, "vatreno krštenje" Genta i Wolfsburga u osmini finala Lige prvaka</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/sport/nogomet/liga-prvaka-psg-savladao-chelsea-sa-2-1-benfica-s-minimalnih-1-0-bolja-od-zenita/160216165" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #22231f"><img src="http://static.klix.ba/media/images/vijesti/s11_160216165.jpg?v=2"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Liga prvaka: PSG savladao Chelsea sa 2:1, Benfica s minimalnih 1:0 bolja od Zenita</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow hidden-md"><div class="col-md-12 col-sm-6"><a href="/sport/nogomet/tek-je-pocetak-godine-a-u-maleziji-smo-vec-vidjeli-gol-za-nagradu-puskas/160216150" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #7c884a"><img src="http://static.klix.ba/media/images/vijesti/s11_160216150.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Tek je početak godine, a u Maleziji smo već vidjeli gol za Nagradu Puskas</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/sport/tenis/konacno-damir-dzumhur-pobijedio-ricardasa-berankisa/160216154" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #907666"><img src="http://static.klix.ba/media/images/vijesti/s11_160216154.jpg"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Konačno: Damir Džumhur pobijedio Ricardasa Berankisa</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/sport/nogomet/evropska-liga-souza-s-dva-pogotka-donio-pobjedu-fenerbahceu-nad-lokomotivom/160216151" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #51555b"><img src="http://static.klix.ba/media/images/vijesti/s11_160216151.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Evropska liga: Souza s dva pogotka donio pobjedu Fenerbahceu nad Lokomotivom</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow hidden-md"><div class="col-md-12 col-sm-6"><a href="/sport/igor-emkic-se-priprema-za-turnir-no-limit-8-spreman-sam-za-izazove-u-ringu-protivnici-ne-znaju-sta-ih-ceka/160216031" class="tch_sport"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #b89b74"><img src="http://static.klix.ba/media/images/vijesti/s11_160216031.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Igor Emkić se priprema za turnir No Limit 8: Spreman sam za izazove u ringu, protivnici ne znaju šta ih čeka</div><div class="clearfix"></div></div></div></div></a></div></div></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="block struct struct_2">
+                <div class="block-dyn">
+                    <div class="block-head">
+                        <div class="col-md-2 col-sm-12 heading">
+                            <div class="kocka" style="background-color: #a45091"></div> <a href="/magazin" class="headingUrl tch_magazin">Magazin</a>
+                        </div>
+                        <div class="col-md-10 block-links hidden-sm hidden-xs">
+                            <a class="tch_magazin" href="/magazin/muzika">Muzika</a>
+                            <div class="seperator">|</div> <a class="tch_magazin" href="/magazin/film-tv">Film/TV</a>
+                            <div class="seperator">|</div> <a class="tch_magazin" href="/magazin/showbiz">Showbiz</a>
+                            <div class="seperator">|</div> <a class="tch_magazin" href="/magazin/ljepotice">Ljepotice</a>
+                            <div class="seperator">|</div> <a class="tch_magazin" href="/magazin/zanimljivosti">Zanimljivosti</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="block-news">
+                        <div class="news-line"><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/magazin/zanimljivosti/jeste-li-znali-da-je-danas-dan-macaka/160217085"><div class="above"><span class="kategorija tc_magazin">Zanimljivosti<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 20</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217085.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Jeste li znali da je danas Dan mačaka?</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 2h 23 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 2h 23 min</span><span class="comments"><i class="icon_komentari"></i> 35</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/magazin/ljepotice/juli-anee-novo-fatalno-lice-svijeta-modelinga/160217023"><div class="above"><span class="kategorija tc_magazin">Ljepotice<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 1</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217023.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Juli Anee, novo fatalno lice svijeta modelinga</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 7h 52 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 7h 52 min</span><span class="comments"><i class="icon_komentari"></i> 50</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12 last"><div class="articleHolder"><article class="kartica velika"><a href="/magazin/film-tv/preminuo-george-gaynes-zvijezda-policijske-akademije/160217021"><div class="above"><span class="kategorija tc_magazin">Film/TV<i class="mark icon_video"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 48</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217021.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Preminuo George Gaynes, zvijezda "Policijske akademije"</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 8h 17 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 8h 17 min</span><span class="comments"><i class="icon_komentari"></i> 20</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div><div class="news-line"><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica bez_slike"><a href="/magazin/zanimljivosti/kako-je-ali-g-razgovarao-s-boutros-ghalijem-kako-se-kaze-g-no-na-francuskom/160217031"><div class="above"><span class="kategorija tc_magazin">Zanimljivosti<i class="mark icon_video"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 48</span></div><h1>Kako je Ali G razgovarao s Boutros-Ghalijem: "Kako se kaže g**no na francuskom?"</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 6h 23 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 6h 23 min</span><span class="comments"><i class="icon_komentari"></i> 40</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica bez_slike"><a href="/magazin/zanimljivosti/america-brat-georgea-busha-na-twitteru-objavio-fotografiju-pistolja/160217018"><div class="above"><span class="kategorija tc_magazin">Zanimljivosti<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 14</span></div><h1>"America": Brat Georgea Busha na Twitteru objavio fotografiju pištolja</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 7h 53 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 7h 53 min</span><span class="comments"><i class="icon_komentari"></i> 13</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12 last"><div class="articleHolder"><article class="kartica bez_slike"><a href="/magazin/zanimljivosti/garaza-u-kojoj-parking-mjesto-kosta-vise-od-116-000-dolara/160217003"><div class="above"><span class="kategorija tc_magazin">Zanimljivosti</span><span class="shareovi"><i class="icon_dijeljenja"></i> 29</span></div><h1>Garaža u kojoj parking mjesto košta više od 116.000 dolara</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 9h 45 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 9h 45 min</span><span class="comments"><i class="icon_komentari"></i> 19</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div><div class="load-more visible-xs" onclick="ga('send', 'event', 'Mobilna prikaži više', 'Click', '');">prikaži više</div>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm block-side block-flex">
+                    <div class="block-title">
+                        <i class="icon_ljepotice title-icon f8" style="color: #a45091;"></i> Ljepotice <a href="/magazin/ljepotice" class="btn pull-right">
+                            Vidi sve <i class="icon icon_strelica_desno"></i>
+                        </a>
+                        <img src="/images/gradient-up.png" class="g-up visible-lg" ng-class="blok.inScroll ? 'inScroll' : ''">
+                    </div>
+                    <div class="block-flex-1" scrolltimer>
+                        <div class="izdvojeneList row theme_pocetna"><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/juli-anee-novo-fatalno-lice-svijeta-modelinga/160217023" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #bd3f4c"><img src="http://static.klix.ba/media/images/vijesti/s11_160217023.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Juli Anee, novo fatalno lice svijeta modelinga</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/upoznajte-alanu-blanchard-uspjesnu-surferku-koja-se-bavi-i-modelingom/160216019" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #c5bcb6"><img src="http://static.klix.ba/media/images/vijesti/s11_160216019.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Upoznajte Alanu Blanchard, uspješnu surferku koja se bavi i modelingom</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/pogledajte-zasto-je-olivia-culpo-jedna-od-zvijezda-u-svijetu-modelinga/160215016" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #381f16"><img src="http://static.klix.ba/media/images/vijesti/s11_160215016.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Pogledajte zašto je Olivia Culpo jedna od zvijezda u svijetu modelinga</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/sofija-kraljica-fitnesa-i-mode/160214048" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #d0cbc8"><img src="http://static.klix.ba/media/images/vijesti/s11_160214048.jpg?v=2"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Sofija, kraljica fitnesa i mode</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/za-gledanje-i-slusanje-prelijepa-dj-unimerce/160213008" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #ded7d9"><img src="http://static.klix.ba/media/images/vijesti/s11_160213008.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Za gledanje i slušanje: Prelijepa DJ Unimerce</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/sta-danas-radi-internet-senzacija-sara-mills/160212034" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #8d9691"><img src="http://static.klix.ba/media/images/vijesti/s11_160212034.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Šta danas radi internet senzacija Sara Mills</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow hidden-md"><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/paris-dylan-djevojka-kojoj-maxim-nije-mogao-odoljeti/160211018" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #b4abab"><img src="http://static.klix.ba/media/images/vijesti/s11_160211018.jpg?v=2"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Paris Dylan, djevojka kojoj Maxim nije mogao odoljeti</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/olga-brun-se-oslanja-na-stav-a-ne-na-tijelo/160210028" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #782c1a"><img src="http://static.klix.ba/media/images/vijesti/s11_160210028.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Olga Brun se oslanja na stav, a ne na tijelo</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/bangs-garcia-je-ponos-filipina/160209122" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #eae8e4"><img src="http://static.klix.ba/media/images/vijesti/s11_160209122.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Bangs Garcia je ponos Filipina</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow hidden-md"><div class="col-md-12 col-sm-6"><a href="/magazin/ljepotice/vitka-maria-voli-slatke-koale-i-muziku/160208038" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #e1e0dd"><img src="http://static.klix.ba/media/images/vijesti/s11_160208038.jpg?v=2"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Vitka Maria voli slatke koale i muziku</div><div class="clearfix"></div></div></div></div></a></div></div></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="block struct struct_7">
+                <div class="block-dyn">
+                    <div class="block-head">
+                        <div class="col-md-2 col-sm-12 heading">
+                            <div class="kocka" style="background-color: #E2A600"></div> <a href="/lifestyle" class="headingUrl tch_lifestyle">Lifestyle</a>
+                        </div>
+                        <div class="col-md-10 block-links hidden-sm hidden-xs">
+                            <a class="tch_lifestyle" href="/lifestyle/modailjepota">Moda i ljepota</a>
+                            <div class="seperator">|</div> <a class="tch_lifestyle" href="/lifestyle/zdravlje">Zdravlje</a>
+                            <div class="seperator">|</div> <a class="tch_lifestyle" href="/lifestyle/vezeiseks">Veze i seks</a>
+                            <div class="seperator">|</div> <a class="tch_lifestyle" href="/lifestyle/hranaipice">Hrana i piće</a>
+                            <div class="seperator">|</div> <a class="tch_lifestyle" href="/lifestyle/kucaiured">Kuća i ured</a>
+                            <div class="seperator hidden-md">|</div> <a class="tch_lifestyle hidden-md" href="/lifestyle/putovanja">Putovanja</a>
+                            <div class="seperator hidden-md">|</div> <a class="tch_lifestyle hidden-md" href="/lifestyle/bebe">Bebe</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="block-news">
+                        <div class="news-line"><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/lifestyle/zdravlje/argentinski-naucnici-tvrde-bolest-kod-beba-ne-izaziva-zika-virus-vec-americki-pesticid/160217074"><div class="above"><span class="kategorija tc_lifestyle">Zdravlje</span><span class="shareovi"><i class="icon_dijeljenja"></i> 16</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217074.jpg"><div class="overblack"></div></div><h1 class="srednji">Argentinski naučnici tvrde: Bolest kod beba ne izaziva Zika virus već američki pesticid</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 4h 15 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 4h 15 min</span><span class="comments"><i class="icon_komentari"></i> 17</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/lifestyle/hranaipice/naucnici-konacno-otkrili-zasto-je-coca-colu-bolje-piti-iz-staklene-flase/160217038"><div class="above"><span class="kategorija tc_lifestyle">Hrana i piće</span><span class="shareovi"><i class="icon_dijeljenja"></i> 21</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217038.jpg"><div class="overblack"></div></div><h1 class="srednji">Naučnici konačno otkrili zašto je Coca-Colu bolje piti iz staklene flaše</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 6h 50 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 6h 50 min</span><span class="comments"><i class="icon_komentari"></i> 30</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12 last"><div class="articleHolder"><article class="kartica velika"><a href="/lifestyle/bebe/konzumacija-ribe-u-trudnoci-povezana-sa-povecanom-tjelesnom-masom-djece/160217019"><div class="above"><span class="kategorija tc_lifestyle">Bebe</span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217019.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Konzumacija ribe u trudnoći povezana sa povećanom tjelesnom masom djece</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 7h 50 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 7h 50 min</span><span class="comments"><i class="icon_komentari"></i> 4</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm block-side block-flex">
+                    <div class="tvprogramBlock">
+                        <div class="block-title" in-view="initializeTVProgram();" in-view-options="{offsetTop: 150}">
+                            <i class="title-icon icon_tv"></i> TV Program
+                            <a href="/tv-program" class="btn pull-right">Vidi sve <i class="icon_strelica_desno"></i></a>
+                        </div>
+                        <div class="tvprogramKanali row">
+                            <a href="/tv-program/nova" class="col-md-12 col-sm-6">
+                                <div class="kanal">
+                                    <div class="boja" style="width: 10%;"></div>
+                                    <div class="naziv">Najbolje godine 2, ep. 140., serija</div>
+                                    <div class="meta">NOVA TV 18:15 - 19:15</div>
+                                </div>
+                            </a>
+                            <a href="/tv-program/al-jazeera-balkans" class="col-md-12 col-sm-6">
+                                <div class="kanal">
+                                    <div class="boja" style="width: 35%;"></div>
+                                    <div class="naziv">VIJESTI, informativni</div>
+                                    <div class="meta">AJB 18:00 - 19:00</div>
+                                </div>
+                            </a>
+                            <a href="/tv-program/bht1" class="col-md-12 col-sm-6">
+                                <div class="kanal">
+                                    <div class="boja" style="width: 42%;"></div>
+                                    <div class="naziv">Ljubav s okusom vina, ep. 106. (R),...</div>
+                                    <div class="meta">BHT1 18:00 - 18:50</div>
+                                </div>
+                            </a>
+                            <a href="/tv-program/obn" class="col-md-12 col-sm-6">
+                                <div class="kanal">
+                                    <div class="boja" style="width: 47%;"></div>
+                                    <div class="naziv">Ali, ep. 52., turska serija</div>
+                                    <div class="meta">OBN 17:55 - 18:50</div>
+                                </div>
+                            </a>
+                            <a href="/tv-program/pink-bih" class="col-md-12 col-sm-6">
+                                <div class="kanal">
+                                    <div class="boja" style="width: 48%;"></div>
+                                    <div class="naziv">Info top 18:00, informativni</div>
+                                    <div class="meta">Pink BH 18:06 - 18:37</div>
+                                </div>
+                            </a>
+                            <a href="/tv-program/ftv" class="col-md-12 col-sm-6 hidden-lg">
+                                <div class="kanal">
+                                    <div class="boja" style="width: 70%;"></div>
+                                    <div class="naziv">Nepokoreni grad, ep. 6., igrana serija...</div>
+                                    <div class="meta">FTV 17:25 - 18:45</div>
+                                </div>
+                            </a>
+                            <a href="/tv-program/rtrs" class="col-md-12 col-sm-6 hidden-lg">
+                                <div class="kanal">
+                                    <div class="boja" style="width: 88%;"></div>
+                                    <div class="naziv">TAJNE INSTITUTA ZA DAME, ep. 92., serija...</div>
+                                    <div class="meta">RTRS 17:38 - 18:27</div>
+                                </div>
+                            </a>
+                            <a href="/tv-program/tv1" class="col-md-12 col-sm-6 hidden-lg">
+                                <div class="kanal">
+                                    <div class="boja" style="width: 93%;"></div>
+                                    <div class="naziv">Oluja, ep. 34., igrana serija</div>
+                                    <div class="meta">TV1 17:25 - 18:25</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="block struct struct_6 block-colored" style="background-color: #487baf;">
+                <div class="block-dyn">
+                    <div class="block-head">
+                        <div class="col-md-2 col-sm-12 heading">
+                            <div class="kocka" style="background-color: #487baf"></div> <a href="/auto" class="headingUrl tch_auto">Auto</a>
+                        </div>
+                        <div class="col-md-10 block-links hidden-sm hidden-xs">
+                            <a class="tch_auto" href="/auto/testovi">Testovi</a>
+                            <div class="seperator">|</div> <a class="tch_auto" href="/auto/noviteti">Noviteti</a>
+                            <div class="seperator">|</div> <a class="tch_auto" href="/auto/koncepti">Koncepti</a>
+                            <div class="seperator">|</div> <a class="tch_auto" href="/auto/tuning">Tuning</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="block-news">
+                        <div class="news-line"><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica velika obojena bg_auto"><a href="/auto/noviteti/alpine-vision-renault-predstavio-predserijski-model-legendarne-alpine/160217088"><div class="above"><span class="kategorija tc_auto">Noviteti<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 0</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217088.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Alpine Vision - Renault predstavio predserijski model legendarne Alpine</h1><div class="below l0"><span class="hidden-md hidden-sm date"><i class="icon_popularno"></i> prije 3h 3 min</span><span class="visible-md-inline-block visible-sm-inline-block date"><i class="icon_popularno"></i> prije 3h 3 min</span><span class="comments"><i class="icon_komentari"></i> 11</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica velika obojena bg_auto"><a href="/auto/general-motors-povlaci-oko-200-000-vozila-zbog-problema-sa-vazdusnim-jastucima/160216124"><div class="above"><span class="kategorija tc_auto">auto</span><span class="shareovi"><i class="icon_dijeljenja"></i> 21</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160216124.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">General Motors povlači oko 200.000 vozila zbog problema sa vazdušnim jastucima</h1><div class="below l0"><span class="hidden-md hidden-sm date"><i class="icon_popularno"></i> jučer</span><span class="visible-md-inline-block visible-sm-inline-block date"><i class="icon_popularno"></i> jučer</span><span class="comments"><i class="icon_komentari"></i> 10</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12 last"><div class="articleHolder"><article class="kartica velika obojena bg_auto"><a href="/auto/tuning/kaege-tunirao-porsche-911-gt3-rs/160216091"><div class="above"><span class="kategorija tc_auto">Tuning<i class="mark icon_foto"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 1</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160216091.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Kaege tunirao Porsche 911 GT3 RS</h1><div class="below l0"><span class="hidden-md hidden-sm date"><i class="icon_popularno"></i> jučer</span><span class="visible-md-inline-block visible-sm-inline-block date"><i class="icon_popularno"></i> jučer</span><span class="comments"><i class="icon_komentari"></i> 11</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm block-side block-flex">
+                    <div class="block-title">
+                        <i class="icon_popularno title-icon f16" style="color: #fff;"></i> Testovi <a href="/auto/testovi" class="btn pull-right btn-white">
+                            Vidi sve <i class="icon icon_strelica_desno"></i>
+                        </a>
+                        <img src="/images/gradient-up.png" class="g-up visible-lg" ng-class="blok.inScroll ? 'inScroll' : ''">
+                    </div>
+                    <div class="block-flex-1" scrolltimer>
+                        <div class="izdvojeneList row theme_pocetna"><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/auto/testovi/renault-espace-1-6-dci-edc-zen-poseban-po-svaku-cijenu/160111144" class="tch_auto"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #37383b"><img src="http://static.klix.ba/media/images/vijesti/s11_160111144.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Renault Espace 1,6 dCi EDC Zen: Poseban po svaku cijenu</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/auto/testovi/barcelona-vozili-smo-novi-kia-sportage/160127043" class="tch_auto"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #78726a"><img src="http://static.klix.ba/media/images/vijesti/s11_160127043.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Barcelona: Vozili smo novi KIA Sportage</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/auto/testovi/alicante-vozili-smo-novi-toyota-rav4-hybrid/160122021" class="tch_auto"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #403c30"><img src="http://static.klix.ba/media/images/vijesti/s11_160122021.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Alicante: Vozili smo novi Toyota RAV4 Hybrid</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/auto/testovi/skoda-superb-2-0-tdi-4x4-style-opet-za-klasu-vise/151226002" class="tch_auto"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #999897"><img src="http://static.klix.ba/media/images/vijesti/s11_151226002.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Škoda Superb 2.0 TDI 4x4 Style: Opet za klasu više</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/auto/testovi/test-hyundai-tucson-1-7-crdi-classic-jedan-iz-prvog-tima/151118020" class="tch_auto"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #beb5b7"><img src="http://static.klix.ba/media/images/vijesti/s11_151118020.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">TEST: Hyundai Tucson 1.7 CRDi Classic: Jedan iz prvog tima</div><div class="clearfix"></div></div></div></div></a></div></div></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="block struct struct_3">
+                <div class="block-dyn">
+                    <div class="block-head">
+                        <div class="col-md-2 col-sm-12 heading">
+                            <div class="kocka" style="background-color: #40afee"></div> <a href="/scitech" class="headingUrl tch_scitech">Scitech</a>
+                        </div>
+                        <div class="col-md-10 block-links hidden-sm hidden-xs">
+                            <a class="tch_scitech" href="/scitech/nauka">Nauka</a>
+                            <div class="seperator">|</div> <a class="tch_scitech" href="/scitech/tehnologija">Tehnologija</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="block-news">
+                        <div class="news-line"><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/scitech/tehnologija/apple-dobio-naredbu-da-pomogne-fbi-u-otkljucati-telefon/160217014"><div class="above"><span class="kategorija tc_scitech">Tehnologija</span><span class="shareovi"><i class="icon_dijeljenja"></i> 11</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217014.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Apple dobio naredbu da pomogne FBI-u otključati telefon</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 7h 45 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 7h 45 min</span><span class="comments"><i class="icon_komentari"></i> 39</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12"><div class="articleHolder"><article class="kartica velika"><a href="/scitech/nauka/eksplozije-i-erupcije-nasa-objavila-fantastican-ultra-hd-video-sunca/160217006"><div class="above"><span class="kategorija tc_scitech">Nauka<i class="mark icon_video"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 19</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160217006.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Eksplozije i erupcije: NASA objavila fantastičan Ultra HD video Sunca</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 9h 23 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 9h 23 min</span><span class="comments"><i class="icon_komentari"></i> 11</span></div><div class="clearfix"></div></a></article></div></div><div class="kolona col col-md-4 col-sm-4 col-xs-12 last"><div class="articleHolder"><article class="kartica velika"><a href="/scitech/tehnologija/kina-ce-iseliti-9-000-ljudi-zbog-izgradnje-najveceg-teleskopa-na-svijetu/160216142"><div class="above"><span class="kategorija tc_scitech">Tehnologija<i class="mark icon_video"></i></span><span class="shareovi"><i class="icon_dijeljenja"></i> 2</span></div><div class="img"><img src="http://static.klix.ba/media/images/vijesti/m32_160216142.jpg?v=1"><div class="overblack"></div></div><h1 class="srednji">Kina će iseliti 9.000 ljudi zbog izgradnje najvećeg teleskopa na svijetu</h1><div class="below l0"><span class="hidden-md hidden-sm date">prije 21h 47 min</span><span class="visible-md-inline-block visible-sm-inline-block date">prije 21h 47 min</span><span class="comments"><i class="icon_komentari"></i> 22</span></div><div class="clearfix"></div></a></article></div></div><div class="clearfix"></div></div>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm block-side block-flex">
+                    <div class="block-title">
+                        <i class="icon_popularno title-icon f16" style="color: #40afee;"></i> Izdvojene <a href="/scitech" class="btn pull-right">
+                            Vidi sve <i class="icon icon_strelica_desno"></i>
+                        </a>
+                        <img src="/images/gradient-up.png" class="g-up visible-lg" ng-class="blok.inScroll ? 'inScroll' : ''">
+                    </div>
+                    <div class="block-flex-1" scrolltimer>
+                        <div class="izdvojeneList row theme_pocetna"><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/scitech/tehnologija/zabavite-se-uz-aplikaciju-msqrd-napravite-zanimljive-selfije-i-klipove/160216036" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #e5d3c8"><img src="http://static.klix.ba/media/images/vijesti/s11_160216036.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Zabavite se uz aplikaciju MSQRD, napravite zanimljive selfije i klipove</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/scitech/tehnologija/iz-microsofta-stize-smartphone-lumia-650/160216027" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #353d46"><img src="http://static.klix.ba/media/images/vijesti/s11_160216027.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Iz Microsofta stiže smartphone Lumia 650</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/scitech/tehnologija/lg-najavio-jeftine-alternative-smartphoneu-lg-g5/160216024" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #222128"><img src="http://static.klix.ba/media/images/vijesti/s11_160216024.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">LG najavio jeftine alternative smartphoneu LG G5</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow"><div class="col-md-12 col-sm-6"><a href="/scitech/tehnologija/ako-postavite-ovaj-datum-na-appleovim-uredjajima-blokirat-cete-ih/160215070" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #aea596"><img src="http://static.klix.ba/media/images/vijesti/s11_160215070.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Ako postavite ovaj datum na Appleovim uređajima, blokirat ćete ih</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/scitech/tehnologija/australska-kompanija-poklonila-besplatan-download-preuzet-1-841-terabajt-podataka/160215028" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #1ddbd3"><img src="http://static.klix.ba/media/images/vijesti/s11_160215028.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Australska kompanija poklonila besplatan download, preuzet 1.841 terabajt podataka</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/scitech/tehnologija/novi-render-pokazuje-da-ce-htc-one-m10-biti-jedan-od-najljepsih-smartphonea-na-trzistu/160215026" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #272727"><img src="http://static.klix.ba/media/images/vijesti/s11_160215026.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Novi render pokazuje da će HTC One M10 biti jedan od najljepših smartphonea na tržištu</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow hidden-md"><div class="col-md-12 col-sm-6"><a href="/scitech/americki-astronaut-zemlja-iz-svemira-izgleda-bolesno-i-ranjivo/160214007" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #c3a6a1"><img src="http://static.klix.ba/media/images/vijesti/s11_160214007.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Američki astronaut: Zemlja iz svemira izgleda bolesno i ranjivo</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/scitech/nasa-regrutuje-nove-astronaute-neophodna-emocionalna-snaga-i-dobro-mentalno-zdravlje/160214019" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #846e5a"><img src="http://static.klix.ba/media/images/vijesti/s11_160214019.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">NASA regrutuje nove astronaute: Neophodna emocionalna snaga i dobro mentalno zdravlje</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-6"><a href="/scitech/tehnologija/polovina-ljudi-na-svijetu-ce-ostati-bez-posla-zbog-robota-u-sljedecih-30-godina/160213079" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #bebaba"><img src="http://static.klix.ba/media/images/vijesti/s11_160213079.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Polovina ljudi na svijetu će ostati bez posla zbog robota u sljedećih 30 godina</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow hidden-md"><div class="col-md-12 col-sm-6"><a href="/scitech/tehnologija/standardno-visoko-otkrivena-cijena-galaxyja-s7-i-s7-edge/160213012" class="tch_scitech"><div class="vholder"><div class="row"><div class="col-xs-3 col-lg-push-9"><div class="img" style="background-color: #cad0db"><img src="http://static.klix.ba/media/images/vijesti/s11_160213012.jpg?v=1"></div></div><div class="col-xs-9 naslovHolder col-lg-pull-3"><div class="naslov">Standardno visoko: Otkrivena cijena Galaxyja S7 i S7 Edge</div><div class="clearfix"></div></div></div></div></a></div></div></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="multiblocks ">
+                <div class="col-md-6 col-sm-12">
+                    <div class="block struct fotodanaBlock" ng-controller="FotodanaCtrl" ng-class="fullscreen ? 'fullscreen' : ''" in-view="initializeFotodana();">
+                        <div class="block-head col-md-12">
+                            <div class="col-md-12 heading">
+                                <div class="kocka bg_nightlife"></div> Fotografija dana
+
+                                <div class="shares pull-right">
+                                    <i class="icon_dijeljenja"></i> {{fotodana.ukupnoSerova}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="fotocont">
+                            <img ng-src="{{fotodana.foto.xl}}" class="photo" imageonload="loaded = true;">
+                            <div class="loader" ng-show="!loaded">
+                                <img src="/images/gridloader.svg" width="150">
+                            </div>
+                            <div class="fs" ng-click="fullscreenOn();" ng-show="!fullscreen"><i class="icon_fullscreen"></i></div>
+                            <div class="fs" ng-click="fullscreenOff();" ng-show="fullscreen"><i class="icon_x"></i></div>
+                            <div class="fotoBtn left" ng-click="prevPhoto();" ng-hide="i == 0">
+                                <i class="icon_chevron_lijevo"></i>
+                            </div>
+                            <div class="fotoBtn right" ng-click="nextPhoto();">
+                                <i class="icon_chevron_desno"></i>
+                            </div>
+                            <div class="fullbottom" ng-show="fullscreen">
+                                <div class="fotobottom pull-left">
+                                    <div class="naslov">{{fotodana.naslov}}</div>
+                                    <div class="meta">{{fotodana.autor}}</div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="shares"><i class="icon_dijeljenja"></i>{{fotodana.ukupnoSerova}}</div>
+                                    <social ng-if="fotodana" url="/fotka-dana/{{fotodana.datumFotkeDana}}" caption="Fotografija dana: {{fotodana.naslov}}" theme="dark"></social>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="fotobottom">
+                            <div class="col-sm-9">
+                                <div class="naslov">{{fotodana.naslov}}</div>
+                                <div class="meta">{{fotodana.autor}}</div>
+                            </div>
+                            <div class="col-sm-3 text-right">
+                                <social ng-if="fotodana" url="/fotka-dana/{{fotodana.datumFotkeDana}}" caption="Fotografija dana: {{fotodana.naslov}}"></social>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-12 hidden-xs">
+                    <div class="block block-colored klixtvbox" style="background-color: #5c6374;">
+                        <div class="block-head">
+                            <div class="heading">
+                                <div class="kocka" style="background-color: #fff;"></div> <a href="/" class="headingUrl tch_auto">Video</a>
+                            </div>
+                        </div>
+                        <div class="block-news dyn">
+                            <div class="izdvojeneList row theme_video"><div class="izdvojeneRow"><div class="col-md-12 col-sm-12"><a href="/magazin/muzika/bh-pjevacica-sheyla-na-muzickom-takmicenju-music-i-o/160217058" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-4"><div class="img" style="background-color: #756360"><div class="play-icon"></div><img src="http://static.klix.ba/media/images/vijesti/m21_160217058.jpg?v=2"></div></div><div class="col-xs-8 naslovHolder col-sm-offset-4"><div class="naslov">Bh. pjevačica Sheyla na muzičkom takmičenju Music I/O</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-12"><a href="/vijesti/bih/pogledajte-kako-su-radoncica-docekali-ispred-avaz-twist-towera-fahro-legendo/160217092" class="tch_vijesti"><div class="vholder"><div class="row"><div class="col-xs-4"><div class="img" style="background-color: #23222b"><div class="play-icon"></div><img src="http://static.klix.ba/media/images/vijesti/m21_160217092.jpg?v=1"></div></div><div class="col-xs-8 naslovHolder col-sm-offset-4"><div class="naslov">Pogledajte kako su Radončića dočekali ispred Avaz Twist Towera: Fahro, legendo</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-12"><a href="/magazin/zanimljivosti/kako-je-ali-g-razgovarao-s-boutros-ghalijem-kako-se-kaze-g-no-na-francuskom/160217031" class="tch_magazin"><div class="vholder"><div class="row"><div class="col-xs-4"><div class="img" style="background-color: #413320"><div class="play-icon"></div><img src="http://static.klix.ba/media/images/vijesti/m21_160217031.jpg?v=1"></div></div><div class="col-xs-8 naslovHolder col-sm-offset-4"><div class="naslov">Kako je Ali G razgovarao s Boutros-Ghalijem: "Kako se kaže g**no na francuskom?"</div><div class="clearfix"></div></div></div></div></a></div></div><div class="izdvojeneRow"><div class="col-md-12 col-sm-12"><a href="/lifestyle/prva-balerina-sa-hidzabom-stephanie-kurlow-zeli-zbliziti-svijet/160217012" class="tch_lifestyle"><div class="vholder"><div class="row"><div class="col-xs-4"><div class="img" style="background-color: #312d2f"><div class="play-icon"></div><img src="http://static.klix.ba/media/images/vijesti/m21_160217012.jpg?v=1"></div></div><div class="col-xs-8 naslovHolder col-sm-offset-4"><div class="naslov">Prva balerina sa hidžabom: Stephanie Kurlow želi zbližiti svijet</div><div class="clearfix"></div></div></div></div></a></div><div class="col-md-12 col-sm-12"><a href="/vijesti/svijet/papa-se-naljutio-kad-su-ga-iz-mase-povukli-za-rukav-ne-budite-sebicni/160217015" class="tch_vijesti"><div class="vholder"><div class="row"><div class="col-xs-4"><div class="img" style="background-color: #cfb8b2"><div class="play-icon"></div><img src="http://static.klix.ba/media/images/vijesti/m21_160217015.jpg?v=1"></div></div><div class="col-xs-8 naslovHolder col-sm-offset-4"><div class="naslov">Papa se naljutio kad su ga iz mase povukli za rukav: Ne budite sebični</div><div class="clearfix"></div></div></div></div></a></div></div></div>
+                        </div>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block miscBox hidden-xs">
+                <div class="block-dyn">
+                    <div class="boxP">
+                        <div class="col-sm-4">
+                            <div href="/krizaljka" class="box krizaljka">
+                                <div class="boxNaziv">
+                                    <div class="pull-left nicon">
+                                        <i class="icon_krizaljka"></i> Križaljka
+                                    </div>
+                                    <a href="/krizaljke" class="hidden pull-right btn">
+                                        Vidi više&nbsp;<i class="icon_strelica_desno"></i>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <a href="/krizaljka">
+                                    <div class="krimg"><img ng-src="http://static.klix.ba/media/images/sezam/thumb/1562_Tinka Milinovic.jpg"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje"></div>
+                                    <div class="polje lastrow"></div>
+                                    <div class="polje lastrow"></div>
+                                    <div class="polje lastrow"></div>
+                                    <div class="polje lastrow"></div>
+                                    <div class="polje go"><i class="icon_strelica_desno"></i></div>
+                                    <div class="clearfix"></div>
+                                    <div class="pitanje">Znate li ko je pjevačica na slici?</div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="box">
+                                <div class="boxNaziv">
+                                    <div class="pull-left nicon">
+                                        <i class="icon_forum"></i>Forum
+                                    </div>
+                                    <a href="http://forum.klix.ba" class="pull-right btn">
+                                        Vidi više&nbsp;<i class="icon_strelica_desno"></i>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="forumLinkovi">
+                                    <a href="http://forum.klix.ba/papanluk-na-automobilima-t82562.html">
+                                        <div class="row">
+                                            <div class="topicTitle col-sm-10">Papanluk na automobilima</div>
+                                            <div class="topicPost text-right col-sm-2">7K</div>
+                                            <span class="clearfix"></span>
+                                        </div>
+                                    </a>
+                                    <a href="http://forum.klix.ba/gdje-u-zenici--t117378.html">
+                                        <div class="row">
+                                            <div class="topicTitle col-sm-10">Gdje u Zenici...?</div>
+                                            <div class="topicPost text-right col-sm-2">360</div>
+                                            <span class="clearfix"></span>
+                                        </div>
+                                    </a>
+                                    <a href="http://forum.klix.ba/uspon-i-pad-hapsenje-fahrudina-radoncica--t140952.html">
+                                        <div class="row">
+                                            <div class="topicTitle col-sm-10">Uspon i pad (HAPŠENJE) Fahrudina Radončića!!!</div>
+                                            <div class="topicPost text-right col-sm-2">3K</div>
+                                            <span class="clearfix"></span>
+                                        </div>
+                                    </a>
+                                    <a href="http://forum.klix.ba/ne-zeli-da-me-ozeni-zbog--t141397.html">
+                                        <div class="row">
+                                            <div class="topicTitle col-sm-10">Ne zeli da me ozeni zbog..</div>
+                                            <div class="topicPost text-right col-sm-2">304</div>
+                                            <span class="clearfix"></span>
+                                        </div>
+                                    </a>
+                                    <a href="http://forum.klix.ba/etf-t67683.html">
+                                        <div class="row">
+                                            <div class="topicTitle col-sm-10">ETF</div>
+                                            <div class="topicPost text-right col-sm-2">1K</div>
+                                            <span class="clearfix"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="box anketa" anketa>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="boxP">
+                        <div class="col-sm-4">
+                            <a href="/tv-program" class="box mini text-center">
+                                <div class="boxCont tvp">
+                                    <i class="icon_tv"></i>
+                                    <span class="boxname">TV Program</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="/stanje-na-putevima" class="box mini text-center hidden-p hidden-m">
+                                <div class="boxCont stanje">
+                                    <i class="icon_auto"></i>
+                                    <span class="boxname">Stanje na putevima</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="/kursna-lista" class="box mini text-center">
+                                <div class="boxCont kursna">
+                                    <i class="icon_kursna_lista"></i>
+                                    <span class="boxname">Kursna lista</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-side hidden-md">
+                    <div class="prognoza row">
+                        <a href="/vrijeme/sarajevo" class="col-md-12 col-sm-6">
+                            <div class="grad">
+                                <div class="naziv col-sm-10 col-lg-10">
+                                    <span class="vr vr-clear-dark"></span>
+                                    <div class="gradIme">Sarajevo</div>
+                                    <div class="gradOpis">Vedro</div>
+                                </div>
+                                <div class="temp col-sm-2 col-lg-2 text-right">
+                                    19°C
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                        <a href="/vrijeme/mostar" class="col-md-12 col-sm-6">
+                            <div class="grad">
+                                <div class="naziv col-sm-10 col-lg-10">
+                                    <span class="vr vr-partlycloudy-dark"></span>
+                                    <div class="gradIme">Mostar</div>
+                                    <div class="gradOpis">Djelomična naoblaka</div>
+                                </div>
+                                <div class="temp col-sm-2 col-lg-2 text-right">
+                                    21°C
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                        <a href="/vrijeme/banja luka" class="col-md-12 col-sm-6">
+                            <div class="grad">
+                                <div class="naziv col-sm-10 col-lg-10">
+                                    <span class="vr vr-partlycloudy-dark"></span>
+                                    <div class="gradIme">Banja Luka</div>
+                                    <div class="gradOpis">Djelomična naoblaka</div>
+                                </div>
+                                <div class="temp col-sm-2 col-lg-2 text-right">
+                                    8°C
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                        <a href="/vrijeme/bihać" class="col-md-12 col-sm-6">
+                            <div class="grad">
+                                <div class="naziv col-sm-10 col-lg-10">
+                                    <span class="vr vr-chancerain-dark"></span>
+                                    <div class="gradIme">Bihać</div>
+                                    <div class="gradOpis">Moguća kiša</div>
+                                </div>
+                                <div class="temp col-sm-2 col-lg-2 text-right">
+                                    15°C
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                        <a href="/vrijeme/tuzla" class="col-md-12 col-sm-6">
+                            <div class="grad">
+                                <div class="naziv col-sm-10 col-lg-10">
+                                    <span class="vr vr-partlycloudy-dark"></span>
+                                    <div class="gradIme">Tuzla</div>
+                                    <div class="gradOpis">Djelomična naoblaka</div>
+                                </div>
+                                <div class="temp col-sm-2 col-lg-2 text-right">
+                                    7°C
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                        <a href="/vrijeme/zenica" class="col-md-12 col-sm-6">
+                            <div class="grad">
+                                <div class="naziv col-sm-10 col-lg-10">
+                                    <span class="vr vr-clear-dark"></span>
+                                    <div class="gradIme">Zenica</div>
+                                    <div class="gradOpis">Vedro</div>
+                                </div>
+                                <div class="temp col-sm-2 col-lg-2 text-right">
+                                    19°C
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div> <div class="block struct nightlifeBlock block-colored bg_nightlife">
+                <div class="block-head col-md-12">
+                    <div class="col-md-12 heading">
+                        <div class="kocka bg_nightlife"></div> <a style="color:#fff;" href="/nightlife">Nightlife</a>
+                        <span class="banner-sarajevsko"></span>
+                        <a href="/nightlife" class="btn btn-white pull-right">
+                            Vidi sve <i class="icon icon_strelica_desno"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="block-news col-md-12">
+                    <div class="news-line">
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 ">
+                            <article class="kartica bg_nightlife obojena velika" style="background: #7676c5!important">
+                                <a href="/nightlife/sarajevo/2016/02/13/tesla-pub/3455">
+                                    <div class="above">
+                                        <span class="num"><i class="icon icon_foto"></i> 26</span>
+                                    </div>
+                                    <div class="img ratio32">
+                                        <div class="overblack"></div>
+                                        <img ng-src="http://static.klix.ba/media/images/nightlife/64630_fr.jpg">
+                                    </div>
+                                    <h1>Tesla pub</h1>
+                                    <div class="below l0">
+                                        <span class="date">13.02.2016.</span>
+                                        <span class="comments">Sarajevo</span>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 ">
+                            <article class="kartica bg_nightlife obojena velika" style="background: #7676c5!important">
+                                <a href="/nightlife/sarajevo/2016/02/13/cheers/3454">
+                                    <div class="above">
+                                        <span class="num"><i class="icon icon_foto"></i> 31</span>
+                                    </div>
+                                    <div class="img ratio32">
+                                        <div class="overblack"></div>
+                                        <img ng-src="http://static.klix.ba/media/images/nightlife/64626_fr.jpg">
+                                    </div>
+                                    <h1>Cheers</h1>
+                                    <div class="below l0">
+                                        <span class="date">13.02.2016.</span>
+                                        <span class="comments">Sarajevo</span>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 ">
+                            <article class="kartica bg_nightlife obojena velika" style="background: #7676c5!important">
+                                <a href="/nightlife/sarajevo/2016/02/13/aquarius/3453">
+                                    <div class="above">
+                                        <span class="num"><i class="icon icon_foto"></i> 23</span>
+                                    </div>
+                                    <div class="img ratio32">
+                                        <div class="overblack"></div>
+                                        <img ng-src="http://static.klix.ba/media/images/nightlife/64585_fr.jpg">
+                                    </div>
+                                    <h1>Aquarius</h1>
+                                    <div class="below l0">
+                                        <span class="date">13.02.2016.</span>
+                                        <span class="comments">Sarajevo</span>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 ">
+                            <article class="kartica bg_nightlife obojena velika" style="background: #7676c5!important">
+                                <a href="/nightlife/sarajevo/2016/02/13/element/3452">
+                                    <div class="above">
+                                        <span class="num"><i class="icon icon_foto"></i> 21</span>
+                                    </div>
+                                    <div class="img ratio32">
+                                        <div class="overblack"></div>
+                                        <img ng-src="http://static.klix.ba/media/images/nightlife/64553_fr.jpg">
+                                    </div>
+                                    <h1>Element</h1>
+                                    <div class="below l0">
+                                        <span class="date">13.02.2016.</span>
+                                        <span class="comments">Sarajevo</span>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 hidden-md hidden-sm hidden-xs">
+                            <article class="kartica bg_nightlife obojena velika" style="background: #7676c5!important">
+                                <a href="/nightlife/sarajevo/2016/02/13/hacienda/3451">
+                                    <div class="above">
+                                        <span class="num"><i class="icon icon_foto"></i> 20</span>
+                                    </div>
+                                    <div class="img ratio32">
+                                        <div class="overblack"></div>
+                                        <img ng-src="http://static.klix.ba/media/images/nightlife/64550_fr.jpg">
+                                    </div>
+                                    <h1>Hacienda</h1>
+                                    <div class="below l0">
+                                        <span class="date">13.02.2016.</span>
+                                        <span class="comments">Sarajevo</span>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 hidden-md hidden-sm hidden-xs">
+                            <article class="kartica bg_nightlife obojena velika" style="background: #7676c5!important">
+                                <a href="/nightlife/sarajevo/2016/02/12/sergej-cetkovic/3450">
+                                    <div class="above">
+                                        <span class="num"><i class="icon icon_foto"></i> 50</span>
+                                    </div>
+                                    <div class="img ratio32">
+                                        <div class="overblack"></div>
+                                        <img ng-src="http://static.klix.ba/media/images/nightlife/64499_fr.jpg">
+                                    </div>
+                                    <h1>Sergej Ćetković</h1>
+                                    <div class="below l0">
+                                        <span class="date">12.02.2016.</span>
+                                        <span class="comments">Sarajevo</span>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer visible ">
+                <div class="redd">
+                    <div class="col-lg-12 footerGore">
+                        <div class="col-lg-2 pull-right text-right">
+                            <a class="dojavi-btn" href="/dojavi-vijest"><i class="icon_posalji_vijest pointer"></i>Dojavi vijest</a>
+                        </div>
+                        <div class="col-lg-1">
+                            <a href="/" class="footer_logo" onclick="javascript:window.location = '/'"><span class="icon_kx_logo"></span></a>
+                        </div>
+                        <div class="col-lg-8 col-md-12 ft_linkovi">
+                            <a href="/o-nama">O nama</a> <span class="crtica">|</span>
+                            <a href="http://marketing.klix.ba">Marketing</a> <span class="crtica">|</span>
+                            <a href="/impressum">Impressum</a> <span class="crtica">|</span>
+                            <a href="/uslovi" class="hidden-xs">Uslovi</a> <span class="crtica hidden-xs">|</span>
+                            <a href="/posao" class="hidden-xs">Posao</a> <span class="crtica hidden-xs">|</span>
+                            <a href="/arhiva" class="hidden-xs">Arhiva</a> <span class="crtica hidden-xs">|</span>
+                            <a href="/rss" class="hidden-xs">RSS</a> <span class="crtica hidden-xs">|</span>
+                            <a href="/kontakt">Kontakt</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-lg-12 footerDole">
+                        <div class="col-lg-3 col-md-6 hidden-xs">
+                            <b>Redakcija:</b><br>
+                            t. +387 33 263-245, &nbsp;&nbsp;&nbsp;e: <a href="/cdn-cgi/l/email-protection#f88a9d9c99939b919299b893949180d69a99">
+                                <span class="__cf_email__" data-cfemail="93e1f6f7f2f8f0faf9f2d3f8fffaebbdf1f2">[email&#160;protected]</span>
+                                <script data-cfhash='f9e31' type="text/javascript">
+                                    /* <![CDATA[ */!function () { try { var t = "currentScript" in document ? document.currentScript : function () { for (var t = document.getElementsByTagName("script"), e = t.length; e--;) if (t[e].getAttribute("data-cfhash")) return t[e] }(); if (t && t.previousSibling) { var e, r, n, i, c = t.previousSibling, a = c.getAttribute("data-cfemail"); if (a) { for (e = "", r = parseInt(a.substr(0, 2), 16), n = 2; a.length - n; n += 2) i = parseInt(a.substr(n, 2), 16) ^ r, e += String.fromCharCode(i); e = document.createTextNode(e), c.parentNode.replaceChild(e, c) } t.parentNode.removeChild(t); } } catch (u) { } }()/* ]]> */</script>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 hidden-xs">
+                            <b>Marketing:</b><br>
+                            t. +387 33 263-250, &nbsp;&nbsp;&nbsp;e: <a href="/cdn-cgi/l/email-protection#7c111d0e17190815121b3c17101504521e1d">
+                                <span class="__cf_email__" data-cfemail="94f9f5e6fff1e0fdfaf3d4fff8fdecbaf6f5">[email&#160;protected]</span>
+                                <script data-cfhash='f9e31' type="text/javascript">
+                                    /* <![CDATA[ */!function () { try { var t = "currentScript" in document ? document.currentScript : function () { for (var t = document.getElementsByTagName("script"), e = t.length; e--;) if (t[e].getAttribute("data-cfhash")) return t[e] }(); if (t && t.previousSibling) { var e, r, n, i, c = t.previousSibling, a = c.getAttribute("data-cfemail"); if (a) { for (e = "", r = parseInt(a.substr(0, 2), 16), n = 2; a.length - n; n += 2) i = parseInt(a.substr(n, 2), 16) ^ r, e += String.fromCharCode(i); e = document.createTextNode(e), c.parentNode.replaceChild(e, c) } t.parentNode.removeChild(t); } } catch (u) { } }()/* ]]> */</script>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 disclaimer">
+                            Copyright 2000-2016 InterSoft d.o.o. <br>
+                            Sva prava zadržana. Zabranjeno preuzimanje sadržaja bez dozvole izdavača.
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
