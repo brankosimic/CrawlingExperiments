@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/brankosimic/MopNewsCrawler.git
-cd alt-tutorial
+cd MopNewsCrawler
 npm install
 npm start
 ```
