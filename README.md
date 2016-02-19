@@ -11,6 +11,14 @@ npm start
 
 ```bash
 
-Restore database backup (KlixDB.backup) to your PostgreSQL instance and change connection in the beginning of server.js
+Restore database backup (KlixDB.backup) to your PostgreSQL instance 
+and change connection in the beginning of server.js
+
+```
+
+
+```bash
+
+To update articles open /updatearticles route
 
 ```
